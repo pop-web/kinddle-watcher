@@ -16,6 +16,8 @@ services:
 
   # 追記
   db:
+    ports:
+      - 3306:3306
     build: ./infra/mysql
     volumes:
       - db-store:/var/lib/mysql
