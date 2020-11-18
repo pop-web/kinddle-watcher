@@ -19,6 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/{id}/mypage', 'MypageController@index')->name('mypage.index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/mypage/add', 'MypageController@add')->name('add');

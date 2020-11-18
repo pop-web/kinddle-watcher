@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class MypageController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -17,17 +18,13 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application mypage.
+     * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
-        return view('home');
-    }
-
-    public function add()
-    {
-
+        $items = Item::all();
+        return view('mypage/index',["items" => $items]);
     }
 }
