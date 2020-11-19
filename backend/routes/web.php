@@ -23,4 +23,4 @@ Route::get('/mypage', 'MypageController@index')->name('mypage.index');
 
 Route::get('/mypage/{item_id}', 'ItemController@index')->name('item.index');
 
-Route::post('/mypage/create', 'MypageController@create')->name('create');
+Route::post('/mypage/create', 'ItemController@create')->name('item.create');

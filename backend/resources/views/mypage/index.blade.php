@@ -2,36 +2,28 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="card-body">
-            <form method="POST" action="{{ route('create') }}">
-                @csrf
-                <div class="form-group row">
-                    <label for="email" class="col-md-4 col-form-label text-md-right">Amazon URL</label>
+    <form method="POST" action="{{ route('item.create') }}">
+        @csrf
+        <div class="form-group">
+            <label for="exampleInputPassword1">Amazon URL</label>
+            <input type="text" class="form-control" name="url" value="{{ old('url') }}"  autofocus placeholder="AmazonURLを入力">
 
-                    <div class="col-md-6">
-                        <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                        @error('url')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="form-group row mb-0">
-                    <div class="col-md-8 offset-md-4">
-                        <button type="submit" class="btn btn-primary">
-                            登録
-                        </button>
-                    </div>
-                </div>
-            </form>
+            @if($errors->any())
+            <ul class="list-unstyled mt-1">
+                @foreach($errors->all() as $message)
+                    <li class="alert alert-danger" role="alert">{{ $message }}</li>
+                @endforeach
+            </ul>
+            @endif
         </div>
+        <button type="submit" class="btn btn-primary">登録</button>
+    </form>
+    <div class="list-group mt-5">
+        @foreach($items as $item)
+            <a href="{{ route('item.index', ['item_id' => $item->id]) }}" class="list-group-item">
+                {{ $item->title }}
+            </a>
+        @endforeach
     </div>
-    @foreach($items as $item)
-        {{ $item->title }}
-    @endforeach
 </div>
 @endsection
