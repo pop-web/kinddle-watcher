@@ -20,5 +20,3 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mypage', 'MypageController@index')->name('mypage.index');
-
-Route::get('/mypage/{item_id}', 'ItemController@index')->name('item.index');

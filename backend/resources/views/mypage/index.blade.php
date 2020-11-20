@@ -13,7 +13,7 @@
     </form>
     <div class="list-group mt-5">
         @foreach($items as $item)
-            <a href="{{ route('item.index', ['item_id' => $item->id]) }}" class="list-group-item">
+            <a href="" class="list-group-item">
                 {{ $item->title }}
             </a>
         @endforeach
