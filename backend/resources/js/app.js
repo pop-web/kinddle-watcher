@@ -6,6 +6,9 @@
 
 require('./bootstrap');
 
+// 共通モダール
+require('./commonModal');
+
 window.Vue = require('vue');
 
 /**

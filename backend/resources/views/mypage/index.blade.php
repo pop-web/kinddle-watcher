@@ -2,21 +2,14 @@
 
 @section('content')
 <div class="container">
-    <form method="POST" action="{{ route('item.create') }}">
-        @csrf
+    <form>
         <div class="form-group">
             <label for="exampleInputPassword1">Amazon URL</label>
-            <input type="text" class="form-control" name="url" value="{{ old('url') }}"  autofocus placeholder="AmazonURLを入力">
-
-            @if($errors->any())
-            <ul class="list-unstyled mt-1">
-                @foreach($errors->all() as $message)
-                    <li class="alert alert-danger" role="alert">{{ $message }}</li>
-                @endforeach
-            </ul>
-            @endif
+            <input type="text" class="form-control" autofocus placeholder="AmazonURLを入力">
         </div>
-        <button type="submit" class="btn btn-primary">登録</button>
+        <button type="button" class="btn btn-primary" id="createItemModal">
+            送信
+        </button>
     </form>
     <div class="list-group mt-5">
         @foreach($items as $item)

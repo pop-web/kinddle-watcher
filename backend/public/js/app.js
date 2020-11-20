@@ -49728,7 +49728,10 @@ module.exports = function(module) {
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // 共通モダール
+
+
+__webpack_require__(/*! ./commonModal */ "./resources/js/commonModal.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -49796,6 +49799,22 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/commonModal.js":
+/*!*************************************!*\
+  !*** ./resources/js/commonModal.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  // Amazonアイテムの表示モーダル
+  $("#createItemModal").on("click", function () {
+    $("#commonModal").modal('show');
+  });
+});
 
 /***/ }),
 
