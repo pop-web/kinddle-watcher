@@ -7,7 +7,7 @@
 require('./bootstrap');
 
 // 共通モダール
-require('./commonModal');
+require('./showItemModal');
 
 window.Vue = require('vue');
 

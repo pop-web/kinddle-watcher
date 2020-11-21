@@ -97,6 +97,10 @@
       <path value="$PROJECT_DIR$/backend/vendor/psr/log" />
       <path value="$PROJECT_DIR$/backend/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/backend/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/backend/vendor/fabpot/goutte" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/dom-crawler" />
     </include_path>
   </component>
   <component name="PhpUnit">
