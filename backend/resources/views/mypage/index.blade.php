@@ -7,10 +7,10 @@
             <label for="exampleInputPassword1">Amazon URL</label>
             <input type="text" class="form-control" autofocus placeholder="AmazonURLを入力" id="itemForm">
         </div>
-        <button type="button" class="btn btn-primary" id="showItemModalBtn">
-            送信
-        </button>
     </form>
+    <button type="button" class="btn btn-primary" id="showItemModalBtn">
+        送信
+    </button>
     <div class="list-group mt-5">
         @foreach($items as $item)
             <a href="" class="list-group-item">

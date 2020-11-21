@@ -49878,11 +49878,12 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$(function () {
-  // Amazonアイテム表示モーダル
-  $("#showItemModalBtn").on("click", function () {
-    var itemUrl = $("#itemForm").val();
-    $("#showItemModal .modal-body").html(itemUrl);
+document.addEventListener('DOMContentLoaded', function () {
+  var showItemModalBtn = document.querySelector("#showItemModalBtn");
+  var showItemModalBody = document.querySelector("#showItemModal .modal-body");
+  var itemFormValue = document.querySelector("#itemForm");
+  showItemModalBtn.addEventListener("click", function () {
+    showItemModalBody.innerHTML = itemFormValue.value;
     $("#showItemModal").modal('toggle');
   });
 });
