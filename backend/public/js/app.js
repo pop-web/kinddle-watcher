@@ -50665,30 +50665,47 @@ document.addEventListener('DOMContentLoaded', function () {
   var showItemModalBtn = document.querySelector("#showItemModalBtn");
   var showItemModalBody = document.querySelector("#showItemModal .modal-body");
   var itemForm = document.querySelector("#itemForm");
+  var submitText = document.querySelector("#submitText");
+  var loadingText = document.querySelector("#loadingText");
   showItemModalBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-    var _yield$axios$post, data;
+    var title, _yield$axios$post, data, status;
 
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.next = 2;
+            submitText.classList.add("d-none");
+            loadingText.classList.remove("d-none");
+            _context.prev = 2;
+            _context.next = 5;
             return axios.post('/scrape', {
               targetUrl: itemForm.value
             });
 
-          case 2:
+          case 5:
             _yield$axios$post = _context.sent;
             data = _yield$axios$post.data;
-            showItemModalBody.innerHTML = data.title;
-            $("#showItemModal").modal('toggle'); // BootStrap Modal
+            status = _yield$axios$post.status;
+            title = data.title;
+            _context.next = 13;
+            break;
 
-          case 6:
+          case 11:
+            _context.prev = 11;
+            _context.t0 = _context["catch"](2);
+
+          case 13:
+            submitText.classList.remove("d-none");
+            loadingText.classList.add("d-none"); //showItemModalBody.innerHTML = title
+
+            $("#showItemModal").modal('show'); // BootStrap Modal
+
+          case 16:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee);
+    }, _callee, null, [[2, 11]]);
   })));
 });
 

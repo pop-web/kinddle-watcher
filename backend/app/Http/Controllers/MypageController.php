@@ -27,4 +27,9 @@ class MypageController extends Controller
         $items = Item::all();
         return view('mypage/index',["items" => $items]);
     }
+
+    public function create()
+    {
+
+    }
 }

@@ -9,7 +9,11 @@
         </div>
     </form>
     <button type="button" class="btn btn-primary" id="showItemModalBtn">
-        送信
+        <span id="submitText">送信</span>
+        <span id="loadingText" class="d-none">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+        </span>
     </button>
     <div class="list-group mt-5">
         @foreach($items as $item)

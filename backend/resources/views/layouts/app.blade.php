@@ -80,17 +80,20 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="commonModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="commonModalLabel">こちらの商品を登録しますか？</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <img src="https://m.media-amazon.com/images/I/51bIiHhapVL.jpg" alt="これからはじめるVue.js実践入門 Kindle版" class="w-75 mx-auto d-block">
+                        <h4 class="text-center mt-4">これからはじめるVue.js実践入門 Kindle版</h4>
+                        <p>With supporting text below as a natural lead-in to additional content.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <form action="/mypage/create">
+                            <button type="button" class="btn btn-primary">登録</button>
+                        </form>
                     </div>
                 </div>
             </div>
