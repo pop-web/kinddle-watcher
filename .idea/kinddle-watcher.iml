@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/backend/app" isTestSource="false" packagePrefix="App\" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/barryvdh/laravel-debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/inflector" />
@@ -29,6 +30,7 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/maximebf/debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/myclabs/deep-copy" />

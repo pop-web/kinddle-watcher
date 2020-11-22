@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mypage', 'MypageController@index')->name('mypage.index');
+
+Route::post('/scrape', 'ScrapeController@index')->name('scrape.index');

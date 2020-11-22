@@ -101,6 +101,8 @@
       <path value="$PROJECT_DIR$/backend/vendor/symfony/browser-kit" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/http-client" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/backend/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/backend/vendor/maximebf/debugbar" />
     </include_path>
   </component>
   <component name="PhpUnit">
