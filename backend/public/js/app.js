@@ -50663,12 +50663,17 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["d
 
 document.addEventListener('DOMContentLoaded', function () {
   var showItemModalBtn = document.querySelector("#showItemModalBtn");
-  var showItemModalBody = document.querySelector("#showItemModal .modal-body");
   var itemForm = document.querySelector("#itemForm");
   var submitText = document.querySelector("#submitText");
   var loadingText = document.querySelector("#loadingText");
+  var itemTitle = document.querySelector("#showItemModal .modal-body h4");
+  var itemUrl = document.querySelector("#showItemModal .modal-body a");
+  var itemImgUrl = document.querySelector("#showItemModal .modal-body img");
+  var hiddenUrlInput = document.querySelector("#hiddenUrlInput");
+  var hiddenTitleInput = document.querySelector("#hiddenTitleInput");
+  var hiddenImgUrl = document.querySelector("#hiddenImgUrl");
   showItemModalBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-    var title, _yield$axios$post, data, status;
+    var _yield$axios$post, data;
 
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
@@ -50685,27 +50690,30 @@ document.addEventListener('DOMContentLoaded', function () {
           case 5:
             _yield$axios$post = _context.sent;
             data = _yield$axios$post.data;
-            status = _yield$axios$post.status;
-            title = data.title;
-            _context.next = 13;
+            itemTitle.innerHTML = data.title;
+            itemUrl.setAttribute('href', data.url);
+            itemImgUrl.setAttribute('src', data.img_url);
+            hiddenTitleInput.value = data.title;
+            hiddenUrlInput.value = data.url;
+            hiddenImgUrl.value = data.img_url;
+            _context.next = 17;
             break;
 
-          case 11:
-            _context.prev = 11;
+          case 15:
+            _context.prev = 15;
             _context.t0 = _context["catch"](2);
 
-          case 13:
+          case 17:
             submitText.classList.remove("d-none");
-            loadingText.classList.add("d-none"); //showItemModalBody.innerHTML = title
-
+            loadingText.classList.add("d-none");
             $("#showItemModal").modal('show'); // BootStrap Modal
 
-          case 16:
+          case 20:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[2, 11]]);
+    }, _callee, null, [[2, 15]]);
   })));
 });
 

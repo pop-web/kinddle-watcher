@@ -80,19 +80,26 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="commonModalLabel">こちらの商品を登録しますか？</h5>
+                        <h5 class="modal-title" id="commonModalLabel">商品登録</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img src="https://m.media-amazon.com/images/I/51bIiHhapVL.jpg" alt="これからはじめるVue.js実践入門 Kindle版" class="w-75 mx-auto d-block">
-                        <h4 class="text-center mt-4">これからはじめるVue.js実践入門 Kindle版</h4>
-                        <p>With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="" target="_blank"><img src="" alt="" class="w-75 mx-auto d-block"></a>
+                        <h4 class="text-center mt-4"></h4>
+                        <div class="d-flex justify-content-center mt-4 text-danger">
+                            <div class="h4 mr-2">現在価格：</div>
+                            <div class="h4">￥3,346</div>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <form action="/mypage/create">
-                            <button type="button" class="btn btn-primary">登録</button>
+                        <form method="POST" action="{{ route('mypage.create') }}">
+                            @csrf
+                            <input type="hidden" name="url" value="" id="hiddenUrlInput">
+                            <input type="hidden" name="title" value="" id="hiddenTitleInput">
+                            <input type="hidden" name="img_url" value="" id="hiddenImgUrl">
+                            <button type="submit" class="btn btn-primary">登録</button>
                         </form>
                     </div>
                 </div>

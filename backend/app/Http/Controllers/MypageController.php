@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MypageController extends Controller
 {
@@ -28,8 +29,15 @@ class MypageController extends Controller
         return view('mypage/index',["items" => $items]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
+        $item = new Item();
+        $item->url = $request->url;
+        $item->title = $request->title;
+        $item->img_url = $request->img_url;
+        Auth::user()->items()->save($item);
 
+        return redirect()->route('mypage.index');
     }
+
 }

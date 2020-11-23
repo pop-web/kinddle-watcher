@@ -17,7 +17,7 @@
     </button>
     <div class="list-group mt-5">
         @foreach($items as $item)
-            <a href="" class="list-group-item">
+            <a href="{{ $item->url }}" class="list-group-item" target="_blank">
                 {{ $item->title }}
             </a>
         @endforeach

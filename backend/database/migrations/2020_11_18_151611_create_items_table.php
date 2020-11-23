@@ -17,6 +17,7 @@ class CreateItemsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('url');
+            $table->text('img_url');
             $table->timestamps();
         });
     }

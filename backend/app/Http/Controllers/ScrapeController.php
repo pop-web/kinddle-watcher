@@ -12,9 +12,13 @@ class ScrapeController extends Controller
     {
         $client = new Client();
         $crawler = $client->request('GET', $request->targetUrl);
-        $itemTitle = $crawler->filter('#title')->each(function ($title) {
-            return $title->text();
-        });
-        return ["title" => $itemTitle[0]];
+        $itemTitle = $crawler->filter('#title')->first()->text();
+        $itemUrl = $request->targetUrl;
+        $itemImgUrl = $crawler->filter('#ebooksImgBlkFront')->first()->attr('src');
+        return [
+            "title" => $itemTitle,
+            "url" => $itemUrl,
+            "img_url" => $itemImgUrl,
+        ];
     }
 }
