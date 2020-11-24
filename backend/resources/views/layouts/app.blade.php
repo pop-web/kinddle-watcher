@@ -80,7 +80,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="commonModalLabel">商品登録</h5>
+                        <h5 class="modal-title" id="commonModalLabel">マイリスト登録</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -89,8 +89,7 @@
                         <a href="" target="_blank"><img src="" alt="" class="w-75 mx-auto d-block"></a>
                         <h4 class="text-center mt-4"></h4>
                         <div class="d-flex justify-content-center mt-4 text-danger">
-                            <div class="h4 mr-2">現在価格：</div>
-                            <div class="h4">￥3,346</div>
+                            <div class="h4 bg-danger text-white rounded-pill py-2 px-4" id="itemPrice"></div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -99,6 +98,7 @@
                             <input type="hidden" name="url" value="" id="hiddenUrlInput">
                             <input type="hidden" name="title" value="" id="hiddenTitleInput">
                             <input type="hidden" name="img_url" value="" id="hiddenImgUrl">
+                            <input type="hidden" name="price" value="" id="hiddenItemPrice">
                             <button type="submit" class="btn btn-primary">登録</button>
                         </form>
                     </div>

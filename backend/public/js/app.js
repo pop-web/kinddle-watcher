@@ -50669,9 +50669,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var itemTitle = document.querySelector("#showItemModal .modal-body h4");
   var itemUrl = document.querySelector("#showItemModal .modal-body a");
   var itemImgUrl = document.querySelector("#showItemModal .modal-body img");
+  var itemPrice = document.querySelector("#itemPrice");
   var hiddenUrlInput = document.querySelector("#hiddenUrlInput");
   var hiddenTitleInput = document.querySelector("#hiddenTitleInput");
   var hiddenImgUrl = document.querySelector("#hiddenImgUrl");
+  var hiddenItemPrice = document.querySelector("#hiddenItemPrice");
   showItemModalBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
     var _yield$axios$post, data;
 
@@ -50690,30 +50692,33 @@ document.addEventListener('DOMContentLoaded', function () {
           case 5:
             _yield$axios$post = _context.sent;
             data = _yield$axios$post.data;
+            console.log(data);
             itemTitle.innerHTML = data.title;
             itemUrl.setAttribute('href', data.url);
             itemImgUrl.setAttribute('src', data.img_url);
+            itemPrice.innerHTML = data.price;
             hiddenTitleInput.value = data.title;
             hiddenUrlInput.value = data.url;
             hiddenImgUrl.value = data.img_url;
-            _context.next = 17;
+            hiddenItemPrice.value = data.price;
+            _context.next = 20;
             break;
 
-          case 15:
-            _context.prev = 15;
+          case 18:
+            _context.prev = 18;
             _context.t0 = _context["catch"](2);
 
-          case 17:
+          case 20:
             submitText.classList.remove("d-none");
             loadingText.classList.add("d-none");
             $("#showItemModal").modal('show'); // BootStrap Modal
 
-          case 20:
+          case 23:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[2, 15]]);
+    }, _callee, null, [[2, 18]]);
   })));
 });
 
