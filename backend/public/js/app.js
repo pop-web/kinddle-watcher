@@ -50666,7 +50666,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var itemForm = document.querySelector("#itemForm");
   var submitText = document.querySelector("#submitText");
   var loadingText = document.querySelector("#loadingText");
-  var itemTitle = document.querySelector("#showItemModal .modal-body h4");
+  var itemTitle = document.querySelector("#showItemModal .modal-body h5");
   var itemUrl = document.querySelector("#showItemModal .modal-body a");
   var itemImgUrl = document.querySelector("#showItemModal .modal-body img");
   var itemPrice = document.querySelector("#itemPrice");

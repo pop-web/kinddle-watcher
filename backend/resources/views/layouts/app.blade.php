@@ -86,10 +86,10 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <a href="" target="_blank"><img src="" alt="" class="w-75 mx-auto d-block"></a>
-                        <h4 class="text-center mt-4"></h4>
-                        <div class="d-flex justify-content-center mt-4 text-danger">
-                            <div class="h4 bg-danger text-white rounded-pill py-2 px-4" id="itemPrice"></div>
+                        <a href="" target="_blank"><img src="" alt="" class="w-50 mx-auto d-block"></a>
+                        <h5 class="text-center mt-3"></h5>
+                        <div class="d-flex justify-content-center mt-3 text-danger">
+                            <div class="h5 bg-danger text-white rounded-pill py-2 px-3" id="itemPrice"></div>
                         </div>
                     </div>
                     <div class="modal-footer">
