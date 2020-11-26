@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingText.classList.remove("d-none")
         try{
             const { data } = await axios.post('/scrape',{targetUrl : itemForm.value})
-console.log(data)
             itemTitle.innerHTML = data.title
             itemUrl.setAttribute('href', data.url);
             itemImgUrl.setAttribute('src', data.img_url);
@@ -29,7 +28,7 @@ console.log(data)
             hiddenImgUrl.value = data.img_url
             hiddenItemPrice.value = data.price
         }catch (e) {
-            //alert(e)
+            alert(e)
         }
         submitText.classList.remove("d-none")
         loadingText.classList.add("d-none")

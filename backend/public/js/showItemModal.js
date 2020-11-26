@@ -2915,7 +2915,6 @@ document.addEventListener('DOMContentLoaded', function () {
           case 5:
             _yield$axios$post = _context.sent;
             data = _yield$axios$post.data;
-            console.log(data);
             itemTitle.innerHTML = data.title;
             itemUrl.setAttribute('href', data.url);
             itemImgUrl.setAttribute('src', data.img_url);
@@ -2927,9 +2926,10 @@ document.addEventListener('DOMContentLoaded', function () {
             _context.next = 20;
             break;
 
-          case 18:
-            _context.prev = 18;
+          case 17:
+            _context.prev = 17;
             _context.t0 = _context["catch"](2);
+            alert(_context.t0);
 
           case 20:
             submitText.classList.remove("d-none");
@@ -2941,7 +2941,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return _context.stop();
         }
       }
-    }, _callee, null, [[2, 18]]);
+    }, _callee, null, [[2, 17]]);
   })));
 });
 

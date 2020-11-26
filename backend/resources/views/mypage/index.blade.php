@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@push('scripts')
+    <script src="{{ mix('/js/showItemModal.js') }}"></script>
+@endpush
 @section('content')
 <div class="container">
     <form>
