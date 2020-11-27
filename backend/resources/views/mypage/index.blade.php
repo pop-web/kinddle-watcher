@@ -19,13 +19,20 @@
     </button>
     <div class="row mt-5">
         @foreach($items as $item)
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" src="{{ $item->img_url }}" alt="{{ $item->title }}">
                 <div class="card-body">
                     <p class="card-text">
                         {{ mb_strimwidth($item->title,0,36,'...','utf8') }}
                     </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">{{ $item->price }}</small>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
