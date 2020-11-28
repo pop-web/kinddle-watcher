@@ -40,4 +40,11 @@ class MypageController extends Controller
 
         return redirect()->route('mypage.index');
     }
+
+    public function delete(Request $request)
+    {
+        $item = Item::find($request->item_id);
+        $item->delete();
+        return redirect()->route('mypage.index');
+    }
 }

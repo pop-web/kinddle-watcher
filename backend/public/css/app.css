@@ -17047,14 +17047,14 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-#deleteBtn {
+.delete_form button {
   position: absolute;
-  top: -1em;
-  right: -1em;
+  top: -0.3em;
+  right: -1.3em;
   color: #212529;
 }
 
-#deleteBtn i.fa-times-circle {
+.delete_form button i.fa-times-circle {
   background-color: #fff;
   border-radius: 50%;
 }

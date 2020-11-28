@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @push('scripts')
     <script src="{{ mix('/js/showItemModal.js') }}"></script>
+    <script src="{{ mix('/js/deleteItem.js') }}"></script>
 @endpush
 @section('content')
 <div class="container">
@@ -21,9 +22,14 @@
         @foreach($items as $item)
         <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="card border-0 rounded-0 bg-transparent mb-4">
-                <button type="button" class="btn btn-sm px-1" id="deleteBtn">
-                    <i class="fas fa-times-circle fa-2x"></i>
-                </button>
+                <form method="POST" action="{{ route('mypage.delete') }}" class="delete_form" onsubmit="return false">
+                    @csrf
+                    @method('DELETE')
+                    <input type="hidden" name="item_id" value="{{ $item->id }}">
+                    <button type="submit" class="btn btn-sm px-1">
+                        <i class="fas fa-times-circle fa-2x"></i>
+                    </button>
+                </form>
                 <a href="{{ $item->url }}" target="_blank"><img class="card-img-top shadow-sm" src="{{ $item->img_url }}" alt="{{ $item->title }}"></a>
                 <div class="card-body mt-2 p-0">
                     <div class="card-text">

@@ -14,14 +14,16 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 // 削除ボタンCSS
-#deleteBtn {
-    position: absolute;
-    top: -1em;
-    right: -1em;
-    color: #212529;
-    i.fa-times-circle{
-        background-color: #fff;
-        border-radius: 50%;
+.delete_form{
+    button {
+        position: absolute;
+        top: -0.3em;
+        right: -1.3em;
+        color: #212529;
+            i.fa-times-circle{
+                background-color: #fff;
+                border-radius: 50%;
+            }
     }
 }
 
