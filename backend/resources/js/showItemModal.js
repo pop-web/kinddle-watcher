@@ -1,7 +1,6 @@
 const axios = require('axios').default;
 
 document.addEventListener('DOMContentLoaded', () => {
-    const showItemModalBtn  = document.querySelector("#showItemModalBtn")
     const submitItemForm  = document.querySelector("#submitItemForm")
     const itemForm = document.querySelector("#itemForm")
     const submitText = document.querySelector("#submitText")

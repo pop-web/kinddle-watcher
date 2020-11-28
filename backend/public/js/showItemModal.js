@@ -2885,7 +2885,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["default"];
 
 document.addEventListener('DOMContentLoaded', function () {
-  var showItemModalBtn = document.querySelector("#showItemModalBtn");
   var submitItemForm = document.querySelector("#submitItemForm");
   var itemForm = document.querySelector("#itemForm");
   var submitText = document.querySelector("#submitText");

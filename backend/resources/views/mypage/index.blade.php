@@ -9,7 +9,7 @@
             <label for="exampleInputPassword1">Amazon URL</label>
             <input type="text" class="form-control" autofocus placeholder="AmazonURLを入力" id="itemForm">
         </div>
-        <button type="submit" class="btn btn-primary" id="showItemModalBtn">
+        <button type="submit" class="btn btn-primary">
             <span id="submitText">送信</span>
             <span id="loadingText" class="d-none">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
