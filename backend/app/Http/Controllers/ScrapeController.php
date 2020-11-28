@@ -15,7 +15,9 @@ class ScrapeController extends Controller
         $itemTitle = $crawler->filter('#title')->first()->text();
         $itemUrl = $request->targetUrl;
         $itemImgUrl = $crawler->filter('#ebooksImgBlkFront')->first()->attr('src');
-        $itemPrice = $crawler->filter('#buybox')->filter('.kindle-price')->filter('.a-size-large')->first()->text();
+        $itemPrice = $crawler->filter('#buybox')->filter('.kindle-price')->filter('.a-size-large')->filter('span')->last()->text();
+        $isKinddle = $crawler->filter('#bylineInfo')->filter('span')->last()->text();
+        \Debugbar::info($isKinddle);
         return [
             "title" => $itemTitle,
             "url" => $itemUrl,

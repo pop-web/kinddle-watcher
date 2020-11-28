@@ -2,6 +2,7 @@ const axios = require('axios').default;
 
 document.addEventListener('DOMContentLoaded', () => {
     const showItemModalBtn  = document.querySelector("#showItemModalBtn")
+    const submitItemForm  = document.querySelector("#submitItemForm")
     const itemForm = document.querySelector("#itemForm")
     const submitText = document.querySelector("#submitText")
     const loadingText = document.querySelector("#loadingText")
@@ -13,10 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const hiddenTitleInput = document.querySelector("#hiddenTitleInput")
     const hiddenImgUrl = document.querySelector("#hiddenImgUrl")
     const hiddenItemPrice = document.querySelector("#hiddenItemPrice")
-    showItemModalBtn.addEventListener("click",async () => {
+    submitItemForm.addEventListener("submit",async (event) => {
+
         submitText.classList.add("d-none")
         loadingText.classList.remove("d-none")
         try{
+            if(!itemForm.value) throw { errMsg : "URLを入力してください。" }
             const { data } = await axios.post('/scrape',{targetUrl : itemForm.value})
             itemTitle.innerHTML = data.title
             itemUrl.setAttribute('href', data.url);
@@ -28,7 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
             hiddenImgUrl.value = data.img_url
             hiddenItemPrice.value = data.price
         }catch (e) {
-            alert(e)
+            if(e.errMsg) {
+                alert(e.errMsg)
+            }else {
+                alert(e)
+            }
+            submitText.classList.remove("d-none")
+            loadingText.classList.add("d-none")
+            return
         }
         submitText.classList.remove("d-none")
         loadingText.classList.add("d-none")

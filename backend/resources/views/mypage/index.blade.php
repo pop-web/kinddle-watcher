@@ -4,33 +4,32 @@
 @endpush
 @section('content')
 <div class="container">
-    <form>
+    <form id="submitItemForm" onsubmit="return false">
         <div class="form-group">
             <label for="exampleInputPassword1">Amazon URL</label>
             <input type="text" class="form-control" autofocus placeholder="AmazonURLを入力" id="itemForm">
         </div>
+        <button type="submit" class="btn btn-primary" id="showItemModalBtn">
+            <span id="submitText">送信</span>
+            <span id="loadingText" class="d-none">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </span>
+        </button>
     </form>
-    <button type="button" class="btn btn-primary" id="showItemModalBtn">
-        <span id="submitText">送信</span>
-        <span id="loadingText" class="d-none">
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            Loading...
-        </span>
-    </button>
     <div class="row mt-5">
         @foreach($items as $item)
-        <div class="col-md-2">
-            <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="{{ $item->img_url }}" alt="{{ $item->title }}">
-                <div class="card-body">
-                    <p class="card-text">
-                        {{ mb_strimwidth($item->title,0,36,'...','utf8') }}
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <small class="text-muted">{{ $item->price }}</small>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="card border-0 rounded-0 bg-transparent mb-4">
+                <button type="button" class="btn btn-sm px-1" id="deleteBtn">
+                    <i class="fas fa-times-circle fa-2x"></i>
+                </button>
+                <a href="{{ $item->url }}" target="_blank"><img class="card-img-top shadow-sm" src="{{ $item->img_url }}" alt="{{ $item->title }}"></a>
+                <div class="card-body mt-2 p-0">
+                    <div class="card-text">
+                        <div>{{ mb_strimwidth($item->title,0,36,'...','utf8') }}</div>
+                        <div class="d-flex justify-content-end mt-2">
+                            <span class="bg-primary text-white rounded-pill px-2">{{ $item->price }}</span>
                         </div>
                     </div>
                 </div>
@@ -54,8 +53,8 @@
                 <div class="modal-body">
                     <a href="" target="_blank"><img src="" alt="" class="w-50 mx-auto d-block"></a>
                     <h5 class="text-center mt-3"></h5>
-                    <div class="d-flex justify-content-center mt-3 text-danger">
-                        <div class="h5 bg-danger text-white rounded-pill py-2 px-3" id="itemPrice"></div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <div class="h5 bg-primary text-white rounded-pill py-1 px-2" id="itemPrice"></div>
                     </div>
                     <div class="form-group form-check text-center mt-3">
                         <input type="checkbox" class="form-check-input" id="mailCheck">

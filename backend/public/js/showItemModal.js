@@ -2886,6 +2886,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["d
 
 document.addEventListener('DOMContentLoaded', function () {
   var showItemModalBtn = document.querySelector("#showItemModalBtn");
+  var submitItemForm = document.querySelector("#submitItemForm");
   var itemForm = document.querySelector("#itemForm");
   var submitText = document.querySelector("#submitText");
   var loadingText = document.querySelector("#loadingText");
@@ -2897,52 +2898,78 @@ document.addEventListener('DOMContentLoaded', function () {
   var hiddenTitleInput = document.querySelector("#hiddenTitleInput");
   var hiddenImgUrl = document.querySelector("#hiddenImgUrl");
   var hiddenItemPrice = document.querySelector("#hiddenItemPrice");
-  showItemModalBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-    var _yield$axios$post, data;
+  submitItemForm.addEventListener("submit", /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(event) {
+      var _yield$axios$post, data;
 
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            submitText.classList.add("d-none");
-            loadingText.classList.remove("d-none");
-            _context.prev = 2;
-            _context.next = 5;
-            return axios.post('/scrape', {
-              targetUrl: itemForm.value
-            });
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              submitText.classList.add("d-none");
+              loadingText.classList.remove("d-none");
+              _context.prev = 2;
 
-          case 5:
-            _yield$axios$post = _context.sent;
-            data = _yield$axios$post.data;
-            itemTitle.innerHTML = data.title;
-            itemUrl.setAttribute('href', data.url);
-            itemImgUrl.setAttribute('src', data.img_url);
-            itemPrice.innerHTML = data.price;
-            hiddenTitleInput.value = data.title;
-            hiddenUrlInput.value = data.url;
-            hiddenImgUrl.value = data.img_url;
-            hiddenItemPrice.value = data.price;
-            _context.next = 20;
-            break;
+              if (itemForm.value) {
+                _context.next = 5;
+                break;
+              }
 
-          case 17:
-            _context.prev = 17;
-            _context.t0 = _context["catch"](2);
-            alert(_context.t0);
+              throw {
+                errMsg: "URLを入力してください。"
+              };
 
-          case 20:
-            submitText.classList.remove("d-none");
-            loadingText.classList.add("d-none");
-            $("#showItemModal").modal('show'); // BootStrap Modal
+            case 5:
+              _context.next = 7;
+              return axios.post('/scrape', {
+                targetUrl: itemForm.value
+              });
 
-          case 23:
-          case "end":
-            return _context.stop();
+            case 7:
+              _yield$axios$post = _context.sent;
+              data = _yield$axios$post.data;
+              itemTitle.innerHTML = data.title;
+              itemUrl.setAttribute('href', data.url);
+              itemImgUrl.setAttribute('src', data.img_url);
+              itemPrice.innerHTML = data.price;
+              hiddenTitleInput.value = data.title;
+              hiddenUrlInput.value = data.url;
+              hiddenImgUrl.value = data.img_url;
+              hiddenItemPrice.value = data.price;
+              _context.next = 25;
+              break;
+
+            case 19:
+              _context.prev = 19;
+              _context.t0 = _context["catch"](2);
+
+              if (_context.t0.errMsg) {
+                alert(_context.t0.errMsg);
+              } else {
+                alert(_context.t0);
+              }
+
+              submitText.classList.remove("d-none");
+              loadingText.classList.add("d-none");
+              return _context.abrupt("return");
+
+            case 25:
+              submitText.classList.remove("d-none");
+              loadingText.classList.add("d-none");
+              $("#showItemModal").modal('show'); // BootStrap Modal
+
+            case 28:
+            case "end":
+              return _context.stop();
+          }
         }
-      }
-    }, _callee, null, [[2, 17]]);
-  })));
+      }, _callee, null, [[2, 19]]);
+    }));
+
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }());
 });
 
 /***/ }),
