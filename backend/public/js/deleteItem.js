@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
   deleteForms.forEach(function (deleteForm) {
     deleteForm.addEventListener("submit", function () {
       if (!window.confirm('本当に削除しますか？')) {
-        window.alert('キャンセルされました');
         return false;
       }
 
