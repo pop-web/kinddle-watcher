@@ -12,12 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mypage', 'MypageController@index')->name('mypage.index');
 Route::post('/mypage/create', 'MypageController@create')->name('mypage.create');

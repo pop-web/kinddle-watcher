@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var deleteForms = document.querySelectorAll(".delete_form");
   deleteForms.forEach(function (deleteForm) {
     deleteForm.addEventListener("submit", function () {
-      if (!window.confirm('本当に削除しますか？')) {
+      if (!window.confirm('マイリストから削除しますか？')) {
         return false;
       }
 
