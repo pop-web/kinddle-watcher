@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(e.errMsg) {
                 alert(e.errMsg)
             }else {
-                alert(e)
+                if(e.response.data.message) alert(e.response.data.message)
             }
             submitText.classList.remove("d-none")
             loadingText.classList.add("d-none")

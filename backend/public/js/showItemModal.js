@@ -2945,7 +2945,7 @@ document.addEventListener('DOMContentLoaded', function () {
               if (_context.t0.errMsg) {
                 alert(_context.t0.errMsg);
               } else {
-                alert(_context.t0);
+                if (_context.t0.response.data.message) alert(_context.t0.response.data.message);
               }
 
               submitText.classList.remove("d-none");

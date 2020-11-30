@@ -12,12 +12,14 @@ class ScrapeController extends Controller
     {
         $client = new Client();
         $crawler = $client->request('GET', $request->targetUrl);
-        $itemTitle = $crawler->filter('#title')->first()->text();
+        $itemSubTitle = $crawler->filter('#productSubtitle')->first()->text();
+        if($itemSubTitle !== "Kindle版"){
+            return abort(400, 'Kindle版ではありません。');
+        }
+        $itemTitle = $crawler->filter('#productTitle')->first()->text();
         $itemUrl = $request->targetUrl;
         $itemImgUrl = $crawler->filter('#ebooksImgBlkFront')->first()->attr('src');
         $itemPrice = $crawler->filter('#buybox')->filter('.kindle-price')->filter('.a-size-large')->filter('span')->last()->text();
-        $isKinddle = $crawler->filter('#bylineInfo')->filter('span')->last()->text();
-        \Debugbar::info($isKinddle);
         return [
             "title" => $itemTitle,
             "url" => $itemUrl,
