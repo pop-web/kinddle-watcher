@@ -18,7 +18,8 @@ class CreateItemsTable extends Migration
             $table->string('title');
             $table->text('url');
             $table->text('img_url');
-            $table->string('price');
+            $table->string('current_price');
+            $table->string('registration_price');
             $table->timestamps();
         });
     }
