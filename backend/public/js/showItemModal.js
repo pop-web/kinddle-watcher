@@ -2930,11 +2930,11 @@ document.addEventListener('DOMContentLoaded', function () {
               itemTitle.innerHTML = data.title;
               itemUrl.setAttribute('href', data.url);
               itemImgUrl.setAttribute('src', data.img_url);
-              itemPrice.innerHTML = data.price;
+              itemPrice.innerHTML = data.registration_price;
               hiddenTitleInput.value = data.title;
               hiddenUrlInput.value = data.url;
               hiddenImgUrl.value = data.img_url;
-              hiddenItemPrice.value = data.price;
+              hiddenItemPrice.value = data.registration_price;
               _context.next = 25;
               break;
 

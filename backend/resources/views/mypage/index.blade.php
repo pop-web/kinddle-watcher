@@ -73,7 +73,7 @@
                     <input type="hidden" name="url" value="" id="hiddenUrlInput">
                     <input type="hidden" name="title" value="" id="hiddenTitleInput">
                     <input type="hidden" name="img_url" value="" id="hiddenImgUrl">
-                    <input type="hidden" name="price" value="" id="hiddenItemPrice">
+                    <input type="hidden" name="registration_price" value="" id="hiddenItemPrice">
                     <button type="submit" class="btn btn-primary">登録</button>
                 </div>
             </form>

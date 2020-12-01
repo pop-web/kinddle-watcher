@@ -24,7 +24,7 @@ class ScrapeController extends Controller
             "title" => $itemTitle,
             "url" => $itemUrl,
             "img_url" => $itemImgUrl,
-            "price" => $itemPrice
+            "registration_price" => $itemPrice
         ];
     }
 }
