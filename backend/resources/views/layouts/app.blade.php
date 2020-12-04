@@ -49,8 +49,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">新規登録</a>
                                 </li>
                             @endif
-                        @endguest
-                        @verified
+                        @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     設定<span class="caret"></span>
@@ -68,7 +67,7 @@
                                     </form>
                                 </div>
                             </li>
-                        @endverified
+                        @endguest
                     </ul>
                 </div>
             </div>
