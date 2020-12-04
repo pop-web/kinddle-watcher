@@ -25,7 +25,7 @@ class MypageController extends Controller
      */
     public function index()
     {
-        $items = Item::orderBy('created_at', 'desc')->get();
+        $items = Item::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
         return view('mypage/index',["items" => $items]);
     }
 
@@ -35,7 +35,8 @@ class MypageController extends Controller
         $item->url = $request->url;
         $item->title = $request->title;
         $item->img_url = $request->img_url;
-        $item->price = $request->price;
+        $item->registration_price = $request->registration_price;
+        $item->current_price = $request->registration_price;
         Auth::user()->items()->save($item);
 
         return redirect()->route('mypage.index');
