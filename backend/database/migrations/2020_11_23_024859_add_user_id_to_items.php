@@ -17,7 +17,9 @@ class AddUserIdToItems extends Migration
             $table->bigInteger('user_id')->unsigned();
 
             // 外部キーを設定
-            $table->foreign('user_id')->references('id')->on('users');
+            //子テーブルに対象レコードがある場合、親テーブルのレコード削除を禁止 ->onDelete('restrict');
+            //親テーブルのレコード更新は許可 ->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
@@ -29,7 +31,7 @@ class AddUserIdToItems extends Migration
     public function down()
     {
         Schema::table('items', function (Blueprint $table) {
-            $table->dropColumn('user_id');
+            $table->dropForeign('items_user_id_foreign');
         });
     }
 }
