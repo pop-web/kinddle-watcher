@@ -103,6 +103,9 @@
       <path value="$PROJECT_DIR$/backend/vendor/symfony/dom-crawler" />
       <path value="$PROJECT_DIR$/backend/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/backend/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="PhpUnit">
