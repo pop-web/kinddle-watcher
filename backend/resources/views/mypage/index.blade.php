@@ -31,7 +31,7 @@
                         <i class="fas fa-times-circle fa-2x"></i>
                     </button>
                 </form>
-                <a href="{{ $item->url }}" target="_blank"><img class="card-img-top shadow-sm" src="{{ $item->img_url }}" alt="{{ $item->title }}"></a>
+                <a href="{{ $item->url }}&tag=watakushiha-22" target="_blank"><img class="card-img-top shadow-sm" src="{{ $item->img_url }}" alt="{{ $item->title }}"></a>
                 <div class="card-body mt-2 p-0">
                     <div class="card-text">
                         <div>{{ mb_strimwidth($item->title,0,36,'...','utf8') }}</div>
