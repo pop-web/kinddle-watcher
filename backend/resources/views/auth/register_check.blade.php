@@ -13,7 +13,7 @@
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">メールアドレス</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-form-label">
                                     <span>{{ $email }}</span>
                                     <input type="hidden" name="email" value="{{$email}}">
                                 </div>
@@ -22,7 +22,7 @@
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">パスワード</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-form-label">
                                     <span>{{ $password_mask }}</span>
                                     <input type="hidden" name="password" value="{{$password}}">
                                 </div>

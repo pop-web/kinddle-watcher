@@ -13,7 +13,7 @@
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">メールアドレス</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-form-label">
                                     <span>{{$user->name}}</span>
                                     <input type="hidden" name="name" value="{{$user->name}}">
                                 </div>

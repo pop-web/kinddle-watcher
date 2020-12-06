@@ -17059,3 +17059,9 @@ readers do not read off random characters that represent icons */
   border-radius: 50%;
 }
 
+.btn:focus,
+.btn.focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
