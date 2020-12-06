@@ -36,7 +36,7 @@
                     <div class="card-text">
                         <div>{{ mb_strimwidth($item->title,0,36,'...','utf8') }}</div>
                         <div class="d-flex justify-content-end mt-2">
-                            <span class="bg-primary text-white rounded-pill px-2">{{ $item->registration_price }}</span>
+                            <span class="bg-primary text-white rounded-pill px-2">￥{{number_format( $item->registration_price)}}</span>
                         </div>
                     </div>
                 </div>

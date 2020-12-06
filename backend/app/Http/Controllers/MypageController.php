@@ -35,8 +35,8 @@ class MypageController extends Controller
         $item->url = $request->url;
         $item->title = $request->title;
         $item->img_url = $request->img_url;
-        $item->registration_price = $request->registration_price;
-        $item->current_price = $request->registration_price;
+        $item->registration_price = str_replace(',', '',preg_replace('/￥/','',$request->registration_price));
+        $item->current_price = str_replace(',', '',preg_replace('/￥/','',$request->registration_price));
         Auth::user()->items()->save($item);
 
         return redirect()->route('mypage.index');
