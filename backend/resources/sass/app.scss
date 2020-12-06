@@ -1,5 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 // Variables
 @import 'variables';
@@ -31,4 +32,12 @@
 .btn.focus{
     outline: none!important;
     box-shadow: none!important;
+}
+
+#logo{
+    font-family: 'Concert One', cursive;
+    font-size: 1.6em;
+    color: #4b4b4b;
+    margin-bottom: 0.1em;
+    margin-left: 0.25rem;
 }
