@@ -36,7 +36,13 @@
                     <div class="card-text">
                         <div>{{ mb_strimwidth($item->title,0,36,'...','utf8') }}</div>
                         <div class="d-flex justify-content-end mt-2">
+                        @if ($item->status === 1)
+                            <span style="text-decoration:line-through;">￥{{number_format( $item->registration_price)}}</span>
+                            <span class="mx-1">→</span>
+                            <span class="bg-danger text-white rounded-pill px-2">￥{{number_format( $item->current_price)}}</span>
+                        @else
                             <span class="bg-primary text-white rounded-pill px-2">￥{{number_format( $item->registration_price)}}</span>
+                        @endif
                         </div>
                     </div>
                 </div>
