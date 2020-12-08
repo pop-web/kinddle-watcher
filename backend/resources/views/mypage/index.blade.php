@@ -37,16 +37,16 @@
                         <div>{{ mb_strimwidth($item->title,0,36,'...','utf8') }}</div>
                         @if ($item->status === 1)
                             <div class="d-flex justify-content-end mt-2">
-                                <span style="text-decoration:line-through;">￥{{number_format( $item->registration_price)}}</span>
+                                <span style="text-decoration:line-through;">￥{{number_format($item->registration_price)}}</span>
                                 <span class="mx-1">→</span>
-                                <span class="bg-danger text-white rounded-pill px-2">￥{{number_format( $item->current_price)}}</span>
+                                <span class="bg-danger text-white rounded-pill px-2">￥{{number_format($item->current_price)}}</span>
                             </div>
                             <div class="d-flex justify-content-end mt-1 text-danger font-weight-bold">
-                                20%OFF
+                                {{  floor((1 - ($item->current_price / $item->registration_price)) * 100) }}%OFF
                             </div>
                         @else
                             <div class="d-flex justify-content-end mt-2">
-                                <span class="bg-primary text-white rounded-pill px-2">￥{{number_format( $item->registration_price)}}</span>
+                                <span class="bg-primary text-white rounded-pill px-2">￥{{number_format($item->registration_price)}}</span>
                             </div>
                         @endif
                     </div>
