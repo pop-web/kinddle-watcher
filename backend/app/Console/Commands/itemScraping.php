@@ -5,6 +5,8 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Goutte\Client;
 use App\Item;
+use App\Mail\EmailNotification;
+use Illuminate\Support\Facades\Mail;
 
 class itemScraping extends Command
 {
@@ -45,10 +47,13 @@ class itemScraping extends Command
             $crawler = $client->request('GET', $item->url);
             $itemPrice = $crawler->filter('#buybox')->filter('.kindle-price')->filter('.a-size-large')->filter('span')->last()->text();
             $intItemPrice = (int)str_replace(',', '',preg_replace('/￥/','',$itemPrice));
-            if($item->registration_price > $intItemPrice){
-                $item->status = 1;
+            if(($item->registration_price > $intItemPrice) && ($item->status == config('const.ITEM_STATUS.NORMAL'))){
+                $item->status = config('const.ITEM_STATUS.SALE');
                 $item->current_price = $intItemPrice;
                 $item->save();
+                $user = Item::find($item->id)->user;
+                $email = new EmailNotification($item);
+                Mail::to($user->email)->send($email);
             }
         }
     }

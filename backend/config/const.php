@@ -15,5 +15,10 @@ return [
         'REGISTER' => '1',
         'MAIL_AUTHED' => '2',
         'DEACTIVE' => '9'
+    ],
+    // 0:通常 1:セール中
+    'ITEM_STATUS' => [
+        'NORMAL' => '0',
+        'SALE' => '1'
     ]
 ];
