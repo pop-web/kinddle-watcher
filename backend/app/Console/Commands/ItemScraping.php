@@ -8,14 +8,14 @@ use App\Item;
 use App\Mail\EmailNotification;
 use Illuminate\Support\Facades\Mail;
 
-class itemScraping extends Command
+class ItemScraping extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:itemScraping';
+    protected $signature = 'command:ItemScraping';
 
     /**
      * The console command description.

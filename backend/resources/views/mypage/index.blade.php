@@ -23,7 +23,7 @@
         @foreach($items as $item)
         <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="card border-0 rounded-0 bg-transparent mb-4">
-                <form method="POST" action="{{ route('mypage.delete') }}" class="delete_form" onsubmit="return false">
+                <form method="POST" action="{{ route('mypage.delete') }}" class="delete_form" onsubmit="return false" autocomplete="off">
                     @csrf
                     @method('DELETE')
                     <input type="hidden" name="item_id" value="{{ $item->id }}">
