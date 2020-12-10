@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthenticationTest extends TestCase
 {
+    // テストケースごとにデータベースをリフレッシュしてマイグレーションを再実行する
+    use RefreshDatabase;
+
     /** @test */
     public function ログイン画面表示()
     {
@@ -36,14 +39,11 @@ class AuthenticationTest extends TestCase
         // まだ、認証されていない
         $this->assertFalse(Auth::check());
 
-        // ファクトリで作ったユーザーデータでログイン中状態を作る)
-        $response = $this->actingAs($user)->get('login');
-
-        // ログイン後にマイページにリダイレクトされるのを確認
-        $response->assertRedirect('mypage');
-
-        // 認証されている
-        $this->assertTrue(Auth::check());
-
+        // ログインを実行
+        $response = $this->post('login', [
+            'email'    => $user->email,
+            'password' => 'test1111'
+        ]);
+        dd($response);
     }
 }
