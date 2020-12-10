@@ -15,29 +15,42 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 // 削除ボタンCSS
-.delete_form{
+.delete_form {
     button {
         position: absolute;
         top: -0.3em;
         right: -1.3em;
         color: #212529;
-            i.fa-times-circle{
-                background-color: #fff;
-                border-radius: 50%;
-            }
+
+        i.fa-times-circle {
+            background-color: #fff;
+            border-radius: 50%;
+        }
     }
 }
 
 .btn:focus,
-.btn.focus{
-    outline: none!important;
-    box-shadow: none!important;
+.btn.focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-#logo{
+#logo {
     font-family: 'Concert One', cursive;
     font-size: 1.6em;
     color: #4b4b4b;
     margin-bottom: 0.1em;
     margin-left: 0.25rem;
+}
+
+.btn-light {
+    color: #212529;
+    background-color: #dae0e5;
+    border-color: #d3d9df;
+}
+
+.btn-light:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
 }

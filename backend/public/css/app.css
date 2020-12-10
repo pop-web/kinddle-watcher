@@ -17073,3 +17073,15 @@ readers do not read off random characters that represent icons */
   margin-left: 0.25rem;
 }
 
+.btn-light {
+  color: #212529;
+  background-color: #dae0e5;
+  border-color: #d3d9df;
+}
+
+.btn-light:not(:disabled):not(.disabled).active {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+

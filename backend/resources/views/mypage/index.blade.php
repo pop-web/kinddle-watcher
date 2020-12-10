@@ -74,10 +74,10 @@
                     <div class="d-flex justify-content-center mt-3">
                         <div class="h5 bg-primary text-white rounded-pill py-1 px-2" id="itemPrice"></div>
                     </div>
-                    <div class="form-group form-check text-center mt-3">
-                        <input type="checkbox" class="form-check-input" id="mailCheck">
-                        <label class="form-check-label" for="mailCheck">セール価格になったらメール通知をする</label>
-                    </div>
+{{--                    <div class="form-group form-check text-center mt-3">--}}
+{{--                        <input type="checkbox" class="form-check-input" id="mailCheck">--}}
+{{--                        <label class="form-check-label" for="mailCheck">セール価格のメール通知をする</label>--}}
+{{--                    </div>--}}
                 </div>
                 <div class="modal-footer">
                     @csrf

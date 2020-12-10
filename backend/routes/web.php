@@ -24,4 +24,9 @@ Route::get('/mypage', 'MypageController@index')->name('mypage.index');
 Route::post('/mypage/create', 'MypageController@create')->name('mypage.create');
 Route::delete('/mypage/delete', 'MypageController@delete')->name('mypage.delete');
 
+Route::get('/config', 'ConfigController@index')->name('config.index');
+Route::get('/config/edit', 'ConfigController@edit')->name('config.edit');
+Route::post('/config/edit', 'ConfigController@update')->name('config.update');;
+Route::post('/config/delete', 'ConfigController@delete')->name('config.delete');;
+
 Route::post('/scrape', 'ScrapeController@index')->name('scrape.index');
