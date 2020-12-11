@@ -51,6 +51,6 @@ class ConfigController extends Controller
     public function delete()
     {
         Auth::user()->delete();
-        return redirect()->route('mypage.index');
+        return redirect()->route('home');
     }
 }
