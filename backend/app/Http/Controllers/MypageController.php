@@ -46,6 +46,6 @@ class MypageController extends Controller
     {
         $item = Item::find($request->item_id);
         $item->delete();
-        return redirect()->route('mypage.index');
+        return redirect()->route('home');
     }
 }

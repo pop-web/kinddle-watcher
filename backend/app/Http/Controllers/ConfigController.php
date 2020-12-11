@@ -24,13 +24,33 @@ class ConfigController extends Controller
      */
     public function index()
     {
-        $config = Auth::user()->first();
-        return view('config/index',["config" => $config]);
+        $config = Auth::user();
+        return view('config/index', ["config" => $config]);
     }
 
     public function edit()
     {
-        $config = Auth::user()->first();
-        return view('config/edit',["config" => $config]);
+        $config = Auth::user();
+        return view('config/edit', ["config" => $config]);
+    }
+
+    public function update(Request $request)
+    {
+        $config = Auth::user();
+        $config->email = $request->email;
+        if ($request->notice) {
+            $config->notice = $request->notice;
+        } else {
+            $config->notice = 0;
+        }
+        $config->save();
+
+        return redirect()->route("config.index");
+    }
+
+    public function delete()
+    {
+        Auth::user()->delete();
+        return redirect()->route('mypage.index');
     }
 }

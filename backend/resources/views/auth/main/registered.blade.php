@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                         <p>本会員登録が完了しました。</p>
-                        <a href="{{url('/')}}" class="sg-btn">トップページへ戻る</a>
+                        <a href="{{url('/login')}}" class="sg-btn">ログイン画面へ</a>
 
                     </div>
                 </div>
