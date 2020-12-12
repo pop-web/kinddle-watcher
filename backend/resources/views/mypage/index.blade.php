@@ -8,7 +8,7 @@
     <form id="submitItemForm" onsubmit="return false">
         <div class="form-group">
             <label for="exampleInputPassword1">Amazon URL</label>
-            <input type="text" class="form-control" autofocus placeholder="AmazonURLを入力" id="itemForm">
+            <input type="text" class="form-control" autofocus placeholder="AmazonURLを入力" id="itemForm" autocomplete="off">
         </div>
         <button type="submit" class="btn btn-primary">
             <span id="submitText">送信</span>
