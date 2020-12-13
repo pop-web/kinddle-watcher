@@ -11,11 +11,17 @@
                     @csrf
                     <div class="form-group">
                         <i class="far fa-envelope fa-lg fa-fw mr-2"></i>
-                        <input type="text" name="email" value="{{ $config->email }}" class="px-2">
+                        <input type="text" name="email" value="{{ old('email',$config->email) }}" class="px-2 form-control d-inline-block w-auto @error('email') is-invalid @enderror">
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <div class="form-group mt-3">
-                            <input type="checkbox" name="notice" id="mailCheck" value="1" @if( $config->notice == true ) checked @endif>
+                            <input type="checkbox" name="notice" id="mailCheck" value="1"
+                                   @if( $config->notice == true ) checked @endif>
                             <label class="form-check-label ml-1" for="mailCheck">セール価格のメール通知をする</label>
                         </div>
                     </div>
