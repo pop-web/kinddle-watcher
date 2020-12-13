@@ -36,6 +36,9 @@ class ConfigController extends Controller
 
     public function update(Request $request)
     {
+        $request->validate([
+            'email' => 'required|string|email:rfc,dns|max:255|unique:users,email,'. Auth::user()->id .'id',
+        ]);
         $config = Auth::user();
         $config->email = $request->email;
         if ($request->notice) {
