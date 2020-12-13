@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ConfigController extends Controller
 {
@@ -28,16 +29,17 @@ class ConfigController extends Controller
         return view('config/index', ["config" => $config]);
     }
 
-    public function edit()
+    public function create()
     {
         $config = Auth::user();
         return view('config/edit', ["config" => $config]);
     }
 
-    public function update(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
-            'email' => 'required|string|email:rfc,dns|max:255|unique:users,email,'. Auth::user()->id .'id',
+            'email' => 'required|string|email:rfc,dns|max:255|unique:users,email,' . Auth::user()->id . 'id',
+            'file_name' => ['file', 'mimes:jpeg,png,jpg,bmb', 'max:2048'],
         ]);
         $config = Auth::user();
         $config->email = $request->email;
@@ -46,12 +48,19 @@ class ConfigController extends Controller
         } else {
             $config->notice = 0;
         }
+
+        // 現在画像ファイルの削除
+        Storage::delete('public/images/' . $config->file_name);
+
+        $path = $request->file('file_name')->store('public/images');
+        $config->file_name = basename($path);
+
         $config->save();
 
         return redirect()->route("config.index");
     }
 
-    public function delete()
+    public function destroy($id)
     {
         Auth::user()->delete();
         return redirect()->route('home');

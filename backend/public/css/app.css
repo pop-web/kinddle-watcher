@@ -17085,3 +17085,15 @@ readers do not read off random characters that represent icons */
   border-color: #343a40;
 }
 
+#avatar img {
+  width: 9em;
+  height: 9em;
+  border: 1px solid #e9ebed;
+}
+
+#navbarDropdown img {
+  width: 2em;
+  height: 2em;
+  border: 1px solid #e9ebed;
+}
+
