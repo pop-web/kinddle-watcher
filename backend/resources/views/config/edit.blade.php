@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@push('scripts')
+    <script src="{{ mix('/js/imagePreview.js') }}"></script>
+@endpush
 @section('content')
     <div class="container">
         <h2 class="mt-5">設定</h2>
@@ -11,15 +14,18 @@
                         @else
                             <img src="{{ asset('/images/user_sample.png') }}" alt="ユーザ画像" class="rounded-circle">
                         @endif
+                        <label id="upload-img-btn">
+                            <i class="fas fa-camera-retro"></i>
+                            <input type="file" name="file_name" style="display:none">
+                        </label>
                     </div>
-                    <input type="file" name="file_name">
                 </div>
-                <div class="col-md-10 mt-4 mx-auto mt-md-0">
+                <div class="col-md-10 mt-3 mt-md-0">
                     @csrf
-                    <div class="form-group">
+                    <div class="form-group d-flex align-items-center">
                         <i class="far fa-envelope fa-lg fa-fw mr-2"></i>
                         <input type="text" name="email" value="{{ old('email',$config->email) }}"
-                               class="px-2 form-control d-inline-block w-auto @error('email') is-invalid @enderror">
+                               class="px-2 form-control d-inline-block @error('email') is-invalid @enderror">
                         @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -33,7 +39,10 @@
                             <label class="form-check-label ml-1" for="mailCheck">セール価格のメール通知をする</label>
                         </div>
                     </div>
-                    <button class="btn btn-primary mt-3" type="submit">変更する</button>
+                    <div class="mt-3">
+                        <button class="btn btn-primary" type="submit">変更する</button>
+                        <a href="{{route('config.index') }}" class="btn btn-outline-primary">キャンセル</a>
+                    </div>
                 </div>
             </div>
         </form>

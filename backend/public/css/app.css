@@ -17079,10 +17079,21 @@ readers do not read off random characters that represent icons */
   border-color: #d3d9df;
 }
 
+#navbarDropdown img {
+  width: 2em;
+  height: 2em;
+  border: 1px solid #e9ebed;
+}
+
 .btn-light:not(:disabled):not(.disabled).active {
   color: #fff;
   background-color: #343a40;
   border-color: #343a40;
+}
+
+#avatar {
+  position: relative;
+  display: inline-block;
 }
 
 #avatar img {
@@ -17091,9 +17102,20 @@ readers do not read off random characters that represent icons */
   border: 1px solid #e9ebed;
 }
 
-#navbarDropdown img {
-  width: 2em;
-  height: 2em;
+#avatar #upload-img-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  color: #4b4b4b;
   border: 1px solid #e9ebed;
+  display: inline-block;
+  font-weight: 400;
+  padding: 0.1rem 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  border-radius: 50%;
+  cursor: pointer;
 }
 

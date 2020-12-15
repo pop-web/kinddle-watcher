@@ -1,6 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/deleteAccount.js": "/js/deleteAccount.js",
     "/js/deleteItem.js": "/js/deleteItem.js",
+    "/js/imagePreview.js": "/js/imagePreview.js",
     "/js/showItemModal.js": "/js/showItemModal.js"
 }

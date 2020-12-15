@@ -49,11 +49,13 @@ class ConfigController extends Controller
             $config->notice = 0;
         }
 
-        // 現在画像ファイルの削除
-        Storage::delete('public/images/' . $config->file_name);
+        if ($request->file('file_name')) {
+            // 現在画像ファイルの削除
+            Storage::delete('public/images/' . $config->file_name);
 
-        $path = $request->file('file_name')->store('public/images');
-        $config->file_name = basename($path);
+            $path = $request->file('file_name')->store('public/images');
+            $config->file_name = basename($path);
+        }
 
         $config->save();
 
