@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@push('scripts')
+    <script src="{{ mix('/js/deleteAccount.js') }}"></script>
+@endpush
 @section('content')
     <div class="container">
         <h2 class="mt-5">設定</h2>
@@ -29,7 +32,7 @@
             </div>
         </div>
         <div class="mt-3">
-            <form method="POST" action="{{ route('config.destroy',$config->id) }}">
+            <form method="POST" action="{{ route('config.destroy',$config->id) }}" id="delete_user" onsubmit="return false" >
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-secondary btn-sm ml-auto d-block">アカウント削除</button>
