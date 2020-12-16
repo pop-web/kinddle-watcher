@@ -14,7 +14,7 @@ class AddColumnsUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('email_verify_token')->nullable();
+            $table->string('email_verify_token')->nullable()->after('email_verified_at');
         });
     }
 
