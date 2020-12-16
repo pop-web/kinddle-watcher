@@ -33,6 +33,6 @@ class EmailVerification extends Mailable
         return $this
             ->subject('【' . config('app.name', 'KinddleWatcher'). '】' . '仮登録が完了しました')
             ->view('auth.email.pre_register')
-            ->with(['token' => $this->user->email_verify_token,]);
+            ->with(['token' => $this->user->email_verify_token,'email' => $this->user->email]);
     }
 }

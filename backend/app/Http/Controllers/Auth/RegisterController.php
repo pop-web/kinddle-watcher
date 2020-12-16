@@ -61,6 +61,21 @@ class RegisterController extends Controller
     }
 
     /**
+     * 仮登録確認画面
+     *
+     * @param Request $request
+     * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
+     */
+    public function preCheck(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $bridge_request = $request->all();
+        $bridge_request['password_mask'] = '******';
+
+        return view('auth.register_check')->with($bridge_request);
+    }
+
+    /**
      * Create a new user instance after a valid registration.
      *
      * @param array $data
@@ -76,21 +91,6 @@ class RegisterController extends Controller
         $email = new EmailVerification($user);
         Mail::to($user->email)->send($email);
         return $user;
-    }
-
-    /**
-     * 仮登録確認画面
-     *
-     * @param Request $request
-     * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
-     */
-    public function preCheck(Request $request)
-    {
-        $this->validator($request->all())->validate();
-        $bridge_request = $request->all();
-        $bridge_request['password_mask'] = '******';
-
-        return view('auth.register_check')->with($bridge_request);
     }
 
     public function register(Request $request)
