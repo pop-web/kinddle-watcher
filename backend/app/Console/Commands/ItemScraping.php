@@ -54,6 +54,10 @@ class ItemScraping extends Command
                 $user = Item::find($item->id)->user;
                 $email = new EmailNotification($item);
                 Mail::to($user->email)->send($email);
+            }else if(($item->registration_price <= $intItemPrice) && ($item->status == config('const.ITEM_STATUS.SALE'))){
+                $item->status = config('const.ITEM_STATUS.NORMAL');
+                $item->current_price = $intItemPrice;
+                $item->save();
             }
         }
     }
