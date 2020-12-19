@@ -14,13 +14,15 @@
   border: none !important;
 }
 
-.card-header {
-  border-bottom: 1px solid #ffbc61 !important;
+.card-header,
+.modal-header,
+.modal-footer {
+  border-color: #7f5e30 !important;
 }
 
 .delete_form button {
   position: absolute;
-  top: -0.3em;
+  top: -1.3em;
   right: -1.3em;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -75,6 +77,17 @@
   line-height: 1.6;
   border-radius: 50%;
   cursor: pointer;
+}
+
+body,
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
 }
 
 /*!
