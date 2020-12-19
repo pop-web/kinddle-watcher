@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">ログイン</div>
+                <div class="card-header text-center font-weight-bold bg-light">ログイン</div>
 
-                <div class="card-body">
+                <div class="card-body bg-light">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

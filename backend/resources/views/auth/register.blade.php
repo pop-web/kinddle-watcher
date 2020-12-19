@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">仮会員登録</div>
+                <div class="card-header text-center font-weight-bold bg-light">仮会員登録</div>
 
-                <div class="card-body">
+                <div class="card-body bg-light">
                     <form method="POST" action="{{ route('register.pre_check') }}">
                         @csrf
 

@@ -35,7 +35,7 @@
             <form method="POST" action="{{ route('config.destroy',$config->id) }}" id="delete_user" onsubmit="return false" >
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-secondary btn-sm ml-auto d-block">アカウント削除</button>
+                <button type="submit" class="btn btn-info btn-sm ml-auto d-block">アカウント削除</button>
             </form>
         </div>
     </div>

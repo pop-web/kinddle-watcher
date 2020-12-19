@@ -5,9 +5,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">仮会員登録完了</div>
+                    <div class="card-header text-center font-weight-bold bg-light">仮会員登録完了</div>
 
-                    <div class="card-body">
+                    <div class="card-body text-center bg-light">
                         <p>この度は、ご登録いただき、誠にありがとうございます。</p>
                         <p>
                             ご本人様確認のため、ご登録いただいたメールアドレスに、<br>

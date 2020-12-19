@@ -31,7 +31,9 @@
                         <i class="fas fa-times-circle fa-2x"></i>
                     </button>
                 </form>
-                <a href="{{ $item->url }}&tag=watakushiha-22" target="_blank"><img class="card-img-top shadow-sm" src="{{ $item->img_url }}" alt="{{ $item->title }}"></a>
+                <a href="{{ $item->url }}&tag=watakushiha-22" target="_blank">
+                    <img class="card-img-top shadow" src="{{ $item->img_url }}" alt="{{ $item->title }}">
+                </a>
                 <div class="card-body mt-2 p-0">
                     <div class="card-text">
                         <div>{{ mb_strimwidth($item->title,0,36,'...','utf8') }}</div>
@@ -39,14 +41,14 @@
                             <div class="d-flex justify-content-end mt-2">
                                 <span style="text-decoration:line-through;">￥{{number_format($item->registration_price)}}</span>
                                 <span class="mx-1">→</span>
-                                <span class="bg-danger text-white rounded-pill px-2">￥{{number_format($item->current_price)}}</span>
+                                <span class="bg-primary text-white rounded-pill px-2">￥{{number_format($item->current_price)}}</span>
                             </div>
                             <div class="d-flex justify-content-end mt-1 text-danger font-weight-bold">
                                 {{  floor((1 - ($item->current_price / $item->registration_price)) * 100) }}%OFF
                             </div>
                         @else
                             <div class="d-flex justify-content-end mt-2">
-                                <span class="bg-primary text-white rounded-pill px-2">￥{{number_format($item->registration_price)}}</span>
+                                <span class="bg-secondary text-white rounded-pill px-2">￥{{number_format($item->registration_price)}}</span>
                             </div>
                         @endif
                     </div>
@@ -72,7 +74,7 @@
                     <a href="" target="_blank"><img src="" alt="" class="w-50 mx-auto d-block"></a>
                     <h5 class="text-center mt-3"></h5>
                     <div class="d-flex justify-content-center mt-3">
-                        <div class="h5 bg-primary text-white rounded-pill py-1 px-2" id="itemPrice"></div>
+                        <div class="h5 bg-secondary text-white rounded-pill py-1 px-2" id="itemPrice"></div>
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -5,15 +5,15 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">本会員登録</div>
+                    <div class="card-header text-center font-weight-bold bg-light">本会員登録</div>
 
                     @isset($message)
-                        <div class="card-body">
+                        <div class="card-body text-center bg-light">
                             {{$message}}
                         </div>
                     @endisset
                     @empty($message)
-                    <div class="card-body">
+                    <div class="card-body bg-light">
                         <form method="POST" action="{{ route('register.main.check') }}">
                             @csrf
                             <input type="hidden" name="email_token" value="{{ $email_token }}">
