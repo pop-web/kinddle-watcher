@@ -95,7 +95,11 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        event(new Registered($user = $this->create($request->all())));
+        try {
+            event(new Registered($user = $this->create($request->all())));
+        } catch (\Exception $e) {
+            /** Do nothing */
+        }
         return view('auth.registered');
     }
 
