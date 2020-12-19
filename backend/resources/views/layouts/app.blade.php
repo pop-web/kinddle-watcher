@@ -81,6 +81,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <footer class="bg-white text-center">
+            <small>&copy; {{ config('app.name', 'KinddleWatcher') }}</small>
+        </footer>
     </div>
 </body>
 </html>
