@@ -18,7 +18,7 @@
             </span>
         </button>
     </form>
-    <h2 class="mt-5">マイリスト</h2>
+    <h2 class="mt-5 mb-4">マイリスト</h2>
     <div class="row">
         @foreach($items as $item)
         <div class="col-6 col-sm-4 col-md-3 col-lg-2">
