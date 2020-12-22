@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitText.classList.add("d-none")
         loadingText.classList.remove("d-none")
         try{
-            if(!itemForm.value) throw { errMsg : "URLを入力してください。" }
+            if(!itemForm.value) throw { errMsg : "Amazon URLを入力してください。" }
             const { data } = await axios.post('/scrape',{targetUrl : itemForm.value})
             itemTitle.innerHTML = data.title
             itemUrl.setAttribute('href', data.url);
@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if(e.errMsg) {
                 alert(e.errMsg)
             }else {
-                if(e.response.data.message) alert(e.response.data.message)
+                if(e.response.data.message){
+                    alert("正しいAmazon URLを入力してください。（" + e.response.data.message + "）")
+                }
             }
             submitText.classList.remove("d-none")
             loadingText.classList.add("d-none")

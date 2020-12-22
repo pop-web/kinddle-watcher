@@ -2915,7 +2915,7 @@ document.addEventListener('DOMContentLoaded', function () {
               }
 
               throw {
-                errMsg: "URLを入力してください。"
+                errMsg: "Amazon URLを入力してください。"
               };
 
             case 5:
@@ -2945,7 +2945,9 @@ document.addEventListener('DOMContentLoaded', function () {
               if (_context.t0.errMsg) {
                 alert(_context.t0.errMsg);
               } else {
-                if (_context.t0.response.data.message) alert(_context.t0.response.data.message);
+                if (_context.t0.response.data.message) {
+                  alert("正しいAmazon URLを入力してください。（" + _context.t0.response.data.message + "）");
+                }
               }
 
               submitText.classList.remove("d-none");
