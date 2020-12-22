@@ -99,7 +99,7 @@
                 <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
             </div>
             <div class="bg-white">
-                <small>&copy; {{ config('app.name', 'KinddleWatcher') }}</small>
+                <small>&copy; 2020-<?php echo date("Y"); ?> {{ config('app.name', 'KinddleWatcher') }}</small>
             </div>
         </footer>
     </div>
