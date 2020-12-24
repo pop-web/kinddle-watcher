@@ -16,4 +16,15 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/deleteItem.js', 'public/js')
     .js('resources/js/deleteAccount.js', 'public/js')
     .js('resources/js/imagePreview.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .browserSync({
+        proxy: {
+            target: 'http://127.0.0.1:10080',
+        },
+        files: [
+            './resources/**/*',
+            './public/**/*',
+        ],
+        open: false,
+        reloadOnRestart: true,
+    });
