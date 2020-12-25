@@ -6,8 +6,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="shortcut icon" href="{{ asset('/images/favicon.ico') }}">
 
-    <title>{{ config('app.name', 'KinddleWatcher') }}</title>
+    <title>{{ config('app.name', 'KinddleWatcher') }} | 電子書籍Kinddle価格通知ツール</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -78,7 +79,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-5">
             @yield('content')
         </main>
         <footer class="text-center">
