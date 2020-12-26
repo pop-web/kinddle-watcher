@@ -11,6 +11,11 @@
 |
 */
 
+if (config('app.env') === 'production' or config('app.env') === 'staging' or config('app.env') === 'heroku') {
+    // asset()やurl()がhttpsで生成される
+    URL::forceScheme('https');
+}
+
 Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
