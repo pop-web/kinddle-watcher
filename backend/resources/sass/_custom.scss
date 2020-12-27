@@ -51,6 +51,11 @@ $theme-colors: (
     font-size: 1.6em;
     margin-bottom: 0.1em;
     margin-left: 0.25rem;
+    @media screen and (max-width: 768px){
+        font-size: 1.3em;
+    }
+
+
 }
 
 #navbarDropdown img{
@@ -94,4 +99,23 @@ body,
 }
 footer {
     margin-top: auto;
+}
+
+.nav-menu{
+    a {
+        padding: 0.25rem 0.5rem;
+        clear: both;
+        font-weight: 400;
+        color: $body-color;
+        width: 100%;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+        @media screen and (max-width: 768px) {
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }

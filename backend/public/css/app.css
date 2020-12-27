@@ -45,6 +45,12 @@
   margin-left: 0.25rem;
 }
 
+@media screen and (max-width: 768px) {
+  #logo {
+    font-size: 1.3em;
+  }
+}
+
 #navbarDropdown img {
   width: 2em;
   height: 2em;
@@ -88,6 +94,26 @@ body,
 
 footer {
   margin-top: auto;
+}
+
+.nav-menu a {
+  padding: 0.25rem 0.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #7f5e30;
+  width: 100%;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu a {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /*!
