@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,6 +18,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- OGP -->
+    <meta property="og:url" content="{{ config('app.url', 'KinddleWatcher') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ config('app.name', 'KinddleWatcher') }}" />
+    <meta property="og:description" content="電子書籍Kinddle価格通知ツール<" />
+    <meta property="og:site_name" content="{{ config('app.name', 'KinddleWatcher') }}" />
+    <meta property="og:image" content=" {{ asset('/images/ogp.png') }}" />
+    <meta name="twitter:card" content="summary">
 </head>
 <body>
     <div id="app">
