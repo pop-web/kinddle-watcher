@@ -26,7 +26,7 @@
     <meta property="og:description" content="電子書籍Kinddle価格通知ツール<" />
     <meta property="og:site_name" content="{{ config('app.name', 'KinddleWatcher') }}" />
     <meta property="og:image" content=" {{ asset('/images/ogp.png') }}" />
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <div id="app">
