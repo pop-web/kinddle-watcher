@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">パスワード再設定</div>
+                <div class="card-header text-center font-weight-bold bg-light">パスワード再設定</div>
 
-                <div class="card-body">
+                <div class="card-body bg-light">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
