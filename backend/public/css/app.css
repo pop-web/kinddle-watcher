@@ -85,6 +85,12 @@
   cursor: pointer;
 }
 
+.line-marker {
+  background: linear-gradient(transparent 60%, #FFBC61 30%);
+  display: inline;
+  padding: 0 2px 0;
+}
+
 body,
 #app {
   display: flex;

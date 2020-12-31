@@ -20,7 +20,7 @@
         </div>
     </section>
     <section style="margin-top: 6rem">
-        <h1 class="h2 font-weight-bold text-center">KinddleWatcherはこんな方にオススメです</h1>
+        <h1 class="h2 font-weight-bold text-center"><span class="line-marker">KinddleWatcherはこんな方にオススメです</span></h1>
         <div class="row mt-5">
             <div class="col-sm-4">
                 <div class="card bg-light">
