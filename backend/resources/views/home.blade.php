@@ -27,7 +27,7 @@
                     <img src="{{ asset('/images/feature01.png') }}" alt="Kinddle本をセール中に購入したい" class="w-100">
                     <div class="card-body">
                         <h2 class="card-title">Kinddle本をセール中に購入したい</h2>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">欲しいkinddle書籍をタイミングよくセール中に安く購入することができます。</p>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <div class="card-body">
                         <h2 class="card-title">セールを狙っているKinddle本を管理したい</h2>
                         <p class="card-text">
-                            With supporting text below as a natural lead-in to additional content.
+                            セール価格を狙っているkinddle書籍だけを登録し、管理することができるため、価格を一目でチェックすることができます。
                         </p>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                     <img src="{{ asset('/images/feature03.png') }}" alt="セール価格になったらメール通知してほしい" class="w-100">
                     <div class="card-body">
                         <h2 class="card-title">セール価格になったらメール通知してほしい</h2>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">登録したkinddle書籍がセール価格になった時にメール通知機能を備えています。</p>
                     </div>
                 </div>
             </div>
