@@ -24,7 +24,7 @@
         <div class="row mt-5">
             <div class="col-sm-4">
                 <div class="card bg-light">
-                    <img src="{{ asset('/images/feature01.png') }}" alt="Kinddle本をセール中に購入したい">
+                    <img src="{{ asset('/images/feature01.png') }}" alt="Kinddle本をセール中に購入したい" class="w-100">
                     <div class="card-body">
                         <h2 class="card-title">Kinddle本をセール中に購入したい</h2>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -33,7 +33,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="card bg-light">
-                    <img src="{{ asset('/images/feature02.png') }}" alt="セールを狙っているKinddle本を管理したい">
+                    <img src="{{ asset('/images/feature02.png') }}" alt="セールを狙っているKinddle本を管理したい" class="w-100">
                     <div class="card-body">
                         <h2 class="card-title">セールを狙っているKinddle本を管理したい</h2>
                         <p class="card-text">
@@ -44,7 +44,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="card bg-light">
-                    <img src="{{ asset('/images/feature03.png') }}" alt="セール価格になったらメール通知してほしい">
+                    <img src="{{ asset('/images/feature03.png') }}" alt="セール価格になったらメール通知してほしい" class="w-100">
                     <div class="card-body">
                         <h2 class="card-title">セール価格になったらメール通知してほしい</h2>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
