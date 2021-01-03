@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class AuthenticationTest extends TestCase
 {
     // テストケースごとにデータベースをリフレッシュしてマイグレーションを再実行する
-    use RefreshDatabase;
+    //use RefreshDatabase;
 
     /** @test */
     public function ログイン画面表示()
@@ -29,21 +29,21 @@ class AuthenticationTest extends TestCase
     }
 
     /** @test */
-    public function ユーザログイン認証()
-    {
-        // ユーザーを１つ作成
-        $user = factory(User::class)->create([
-            'password'  => bcrypt('test1234')
-        ]);
-
-        // まだ、認証されていない
-        $this->assertFalse(Auth::check());
-
-        // ログインを実行
-        $response = $this->post('login', [
-            'email'    => $user->email,
-            'password' => 'test1111'
-        ]);
-        dd($response);
-    }
+//    public function ユーザログイン認証()
+//    {
+//        // ユーザーを１つ作成
+//        $user = factory(User::class)->create([
+//            'password'  => bcrypt('test1234')
+//        ]);
+//
+//        // まだ、認証されていない
+//        $this->assertFalse(Auth::check());
+//
+//        // ログインを実行
+//        $response = $this->post('login', [
+//            'email'    => $user->email,
+//            'password' => 'test1111'
+//        ]);
+//        dd($response);
+//    }
 }
