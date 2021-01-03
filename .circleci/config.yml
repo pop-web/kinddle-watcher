@@ -29,7 +29,7 @@ jobs:
           command: composer install -n --prefer-dist
       - save_cache:
           paths:
-            - ./vendor
+            - ./backend/vendor
           key: v1-dependencies-{{ checksum "backend/composer.json" }}
       - run:
           name: Run PHPUnit
