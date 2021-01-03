@@ -10,7 +10,7 @@
             <h1 class="h1 font-weight-bold">
                 Kinddle本のセールを<br />監視し、通知する
             </h1>
-            <p class="h5">電子書籍Kinddleに登録し管理<br>セール価格になったらメール通知します。</p>
+            <p class="h5">電子書籍Kinddleを登録しておき、<br>セール価格になったらメール通知します。</p>
             <div class="mt-3">
                 <a class="btn btn-primary btn-lg rounded-pill" role="button" href="{{ route('register') }}">新規登録はこちら</a>
             </div>
