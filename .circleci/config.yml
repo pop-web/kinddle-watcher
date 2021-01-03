@@ -31,7 +31,7 @@ jobs:
           paths:
             - ./backend/vendor
           key: v1-dependencies-{{ checksum "backend/composer.json" }}
-     - run:
+      - run:
          name: Run Artisan
          command: backend/php artisan config:clear
       - run:
