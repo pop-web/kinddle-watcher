@@ -8,7 +8,7 @@ jobs:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.4-fpm-buster
-      - image: circleci/mysql:8.0
+      - image: circleci/mysql:8.0.0
     environment:
       - DB_CONNECTION: circle_testing
     steps:
@@ -31,10 +31,7 @@ jobs:
           paths:
             - ./backend/vendor
           key: v1-dependencies-{{ checksum "backend/composer.json" }}
-      - run:
-          name: Run Artisan
-          working_directory: backend
-          command: php artisan config:clear
+      - run: php artisan key:generate
       - run:
           name: Run PHPUnit
           working_directory: backend
