@@ -9,9 +9,9 @@ jobs:
       # Specify the version you desire here
       - image: circleci/php:7.1-node-browsers
       - image: circleci/mysql:8.0
-      environment:
-        - DB_CONNECTION: circle_testing
-      working_directory: ~/backend
+    environment:
+      - DB_CONNECTION: circle_testing
+    working_directory: ~/backend
     steps:
       - checkout
       - run:
