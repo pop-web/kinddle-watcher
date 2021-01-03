@@ -33,7 +33,8 @@ jobs:
           key: v1-dependencies-{{ checksum "backend/composer.json" }}
       - run:
          name: Run Artisan
-         command: backend/php artisan config:clear
+         working_directory: backend
+         command: php artisan config:clear
       - run:
           name: Run PHPUnit
           command: backend/vendor/bin/phpunit backend/tests/Feature/
