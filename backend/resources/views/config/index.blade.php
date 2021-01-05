@@ -9,7 +9,7 @@
             <div class="col-md-2">
                 <div id="avatar">
                     @if($config->file_name)
-                        <img src="{{ asset('/storage/images/'.$config->file_name) }}" class="rounded-circle">
+                        <img src="{{ $config->file_url }}" class="rounded-circle">
                     @else
                         <img src="{{ asset('/images/user_sample.png') }}" alt="ユーザ画像" class="rounded-circle">
                     @endif

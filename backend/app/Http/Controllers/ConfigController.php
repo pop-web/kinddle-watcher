@@ -26,12 +26,20 @@ class ConfigController extends Controller
     public function index()
     {
         $config = Auth::user();
+
+        // S3画像URLの生成
+        $config->file_url = Storage::disk('s3')->url($config->file_name);
+
         return view('config/index', ["config" => $config]);
     }
 
     public function create()
     {
         $config = Auth::user();
+
+        // S3画像URLの生成
+        $config->file_url = Storage::disk('s3')->url($config->file_name);
+
         return view('config/edit', ["config" => $config]);
     }
 
@@ -51,10 +59,10 @@ class ConfigController extends Controller
 
         if ($request->file('file_name')) {
             // 現在画像ファイルの削除
-            Storage::delete('public/images/' . $config->file_name);
+            Storage::disk('s3')->delete('/', $config->file_name,'public');
 
-            $path = $request->file('file_name')->store('public/images');
-            $config->file_name = basename($path);
+            $path = Storage::disk('s3')->putFile('/', $request->file('file_name'), 'public');
+            $config->file_name = $path;
         }
 
         $config->save();
