@@ -6,16 +6,16 @@
     <div class="container">
         <h2 class="mt-5">設定</h2>
         <div class="row mt-4">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div id="avatar">
                     @if($config->file_name)
-                        <img src="{{ $config->file_url }}" class="rounded-circle">
+                        <img src="{{ $config->file_url }}" class="rounded">
                     @else
-                        <img src="{{ asset('/images/user_sample.png') }}" alt="ユーザ画像" class="rounded-circle">
+                        <img src="{{ asset('/images/user_sample.png') }}" alt="ユーザ画像" class="rounded">
                     @endif
                 </div>
             </div>
-            <div class="col-md-10 mt-2 mx-auto mt-md-0">
+            <div class="col-md-9 mt-2 mx-auto mt-md-0">
                 <div class="py-2">
                     <i class="far fa-envelope fa-lg fa-fw mr-1"></i>
                     {{ $config->email }}

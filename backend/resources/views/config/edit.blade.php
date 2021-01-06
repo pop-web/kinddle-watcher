@@ -7,12 +7,12 @@
         <h2 class="mt-5">設定</h2>
         <form method="POST" action="{{ route('config.store') }}" enctype="multipart/form-data">
             <div class="row mt-4">
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div id="avatar">
                         @if($config->file_name)
-                            <img src="{{ $config->file_url }}" class="rounded-circle">
+                            <img src="{{ $config->file_url }}" class="roundede">
                         @else
-                            <img src="{{ asset('/images/user_sample.png') }}" alt="ユーザ画像" class="rounded-circle">
+                            <img src="{{ asset('/images/user_sample.png') }}" alt="ユーザ画像" class="rounded">
                         @endif
                         <label id="upload-img-btn">
                             <i class="fas fa-camera-retro"></i>
@@ -20,7 +20,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="col-md-10 mt-3 mt-md-0">
+                <div class="col-md-9 mt-3 mt-md-0">
                     @csrf
                     <div class="form-group d-flex align-items-center">
                         <i class="far fa-envelope fa-lg fa-fw mr-2"></i>

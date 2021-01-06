@@ -68,8 +68,7 @@ $theme-colors: (
     position: relative;
     display: inline-block;
     img {
-        width: 9em;
-        height: 9em;
+        width: 100%;
         border: 1px solid #e9ebed;
     }
     #upload-img-btn {
