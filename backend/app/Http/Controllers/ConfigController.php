@@ -28,7 +28,9 @@ class ConfigController extends Controller
         $config = Auth::user();
 
         // S3画像URLの生成
-        $config->file_url = Storage::disk('s3')->url($config->file_name);
+        if($config->file_name) {
+            $config->file_url = Storage::disk('s3')->url($config->file_name);
+        }
 
         return view('config/index', ["config" => $config]);
     }
@@ -38,7 +40,9 @@ class ConfigController extends Controller
         $config = Auth::user();
 
         // S3画像URLの生成
-        $config->file_url = Storage::disk('s3')->url($config->file_name);
+        if($config->file_name) {
+            $config->file_url = Storage::disk('s3')->url($config->file_name);
+        }
 
         return view('config/edit', ["config" => $config]);
     }
