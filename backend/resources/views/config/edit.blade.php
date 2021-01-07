@@ -4,7 +4,7 @@
 @endpush
 @section('content')
     <div class="container">
-        <h2 class="mt-5">設定</h2>
+        <h2>設定</h2>
         <form method="POST" action="{{ route('config.store') }}" enctype="multipart/form-data">
             <div class="row mt-4">
                 <div class="col-md-3">

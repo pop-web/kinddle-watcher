@@ -110,11 +110,11 @@
                             <small>利用規約</small>
                         </a>
                     </li>
-                    <li class="mx-2">
+                    <!-- <li class="mx-2">
                         <a href="{{ route('faq') }}">
                             <small>よくある質問</small>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="mx-2">
                         <a href="/contact">
                             <small>お問い合わせ</small>
