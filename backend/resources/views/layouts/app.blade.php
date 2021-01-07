@@ -43,10 +43,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -107,7 +103,24 @@
             <div class="d-inline-block">
                 <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
             </div>
-            <div class="bg-white">
+            <div class="bg-white py-1">
+                <ul class="d-flex justify-content-center m-0 p-0 list-unstyled">
+                    <li class="mx-2">
+                        <a href="{{ route('agreement') }}">
+                            <small>利用規約</small>
+                        </a>
+                    </li>
+                    <li class="mx-2">
+                        <a href="{{ route('faq') }}">
+                            <small>よくある質問</small>
+                        </a>
+                    </li>
+                    <li class="mx-2">
+                        <a href="/contact">
+                            <small>お問い合わせ</small>
+                        </a>
+                    </li>
+                </ul>
                 <small>&copy; 2020-<?php echo date("Y"); ?> {{ config('app.name', 'KinddleWatcher') }}</small>
             </div>
         </footer>

@@ -30,3 +30,7 @@ Route::delete('/mypage/delete', 'MypageController@delete')->name('mypage.delete'
 Route::resource('config', 'ConfigController', ['only' => ['index', 'create', 'store', 'destroy']]);
 
 Route::post('/scrape', 'ScrapeController@index')->name('scrape.index');
+
+Route::view('/agreement', 'agreement')->name('agreement');
+Route::view('/faq', 'faq')->name('faq');
+
