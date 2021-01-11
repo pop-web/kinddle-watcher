@@ -70,7 +70,7 @@ class LoginController extends Controller
             return redirect('/login')->with('oauth_error', 'ログインに失敗しました');
             // エラーならログイン画面へ転送
         }
-dd($user->token);
+
         $myinfo = User::firstOrCreate(['token' => $user->token ],
             ['email' => $user->getEmail()]);
         Auth::login($myinfo);
