@@ -64,6 +64,7 @@
                                 @endif
                             </div>
                         </div>
+                        <a href="login/twitter">twitter</a>
                     </form>
                 </div>
             </div>

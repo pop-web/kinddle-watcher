@@ -29,5 +29,12 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    /**
+     * socialite Settings
+     */
+    'twitter' => [
+        'client_id'     => env('TWITTER_API_KEY'),
+        'client_secret' => env('TWITTER_API_SECRET'),
+        'redirect'      => env('TWITTER_CALLBACKURL'),
+    ],
 ];

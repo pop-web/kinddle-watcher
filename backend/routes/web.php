@@ -34,3 +34,7 @@ Route::post('/scrape', 'ScrapeController@index')->name('scrape.index');
 Route::view('/agreement', 'agreement')->name('agreement');
 Route::view('/faq', 'faq')->name('faq');
 
+//Twitter
+Route::get('login/twitter', 'Auth\LoginController@redirectToTwitterProvider');
+Route::get('login/twitter/callback', 'Auth\LoginController@handleTwitterProviderCallback');
+
