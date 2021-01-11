@@ -72,7 +72,7 @@ class LoginController extends Controller
         }
 
         $myinfo = User::firstOrCreate(['token' => $user->id ],
-            ['email' => $user->getEmail(),'token' => $user->token]);
+            ['email' => $user->getEmail(),'token' => $user->id]);
         Auth::login($myinfo);
         return redirect()->to('/'); // homeへ転送
 
