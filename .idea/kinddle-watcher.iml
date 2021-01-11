@@ -119,6 +119,8 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/mtdowling/jmespath.php" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/flysystem-aws-s3-v3" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/aws/aws-sdk-php" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/laravel/socialite" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/oauth1-client" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
