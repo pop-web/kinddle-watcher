@@ -36,7 +36,7 @@ jobs:
             - ./backend/vendor
           key: v1-dependencies-{{ checksum "backend/composer.json" }}
       - run:
-          name: Run Artisan
+          name: Key Generate
           working_directory: backend
           command: php artisan key:generate
       - run:
