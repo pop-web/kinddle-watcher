@@ -59,5 +59,18 @@
             </div>
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center font-weight-bold bg-light">SNSで新規登録</div>
+                    <div class="text-center bg-light">
+                        <a href="login/twitter" class="btn btn-primary mt-3 tw">
+                            <i class="fab fa-twitter fa-fw"></i>
+                            Twitterでログイン
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

@@ -121,6 +121,26 @@ footer {
   }
 }
 
+.btn.tw {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.btn.tw:hover {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.btn.tw:not(:disabled):not(.disabled):active {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.btn.tw:focus {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

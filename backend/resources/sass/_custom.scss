@@ -126,3 +126,20 @@ footer {
         }
     }
 }
+
+.btn.tw {
+    background-color: rgb(29, 161, 242);
+    border-color: rgb(29, 161, 242);
+    &:hover{
+        background-color: rgb(29, 161, 242);
+        border-color: rgb(29, 161, 242);
+    }
+    &:not(:disabled):not(.disabled):active {
+        background-color: rgb(29, 161, 242);
+        border-color: rgb(29, 161, 242);
+    }
+    &:focus {
+        background-color: rgb(29, 161, 242);
+        border-color: rgb(29, 161, 242);
+    }
+}
