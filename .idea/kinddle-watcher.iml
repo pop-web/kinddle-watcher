@@ -121,6 +121,9 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/aws/aws-sdk-php" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/laravel/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/oauth1-client" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/starkbank/ecdsa" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/sendgrid/sendgrid" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/sendgrid/php-http-client" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

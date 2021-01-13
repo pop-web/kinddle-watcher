@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="{{ asset('/images/favicon.ico') }}">
 
     <title>{{ config('app.name', 'KinddleWatcher') }} | 電子書籍Kinddle価格通知ツール</title>
+    <meta name="description" content="電子書籍Kinddleのセールをメールで通知してくれるツールです。">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,8 +23,8 @@
     <!-- OGP -->
     <meta property="og:url" content="{{ config('app.url', 'KinddleWatcher') }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ config('app.name', 'KinddleWatcher') }}" />
-    <meta property="og:description" content="電子書籍Kinddle価格通知ツール" />
+    <meta property="og:title" content="{{ config('app.name', 'KinddleWatcher') }} | 電子書籍Kinddle価格通知ツール" />
+    <meta property="og:description" content="電子書籍Kinddleのセールをメールで通知してくれるツールです。" />
     <meta property="og:site_name" content="{{ config('app.name', 'KinddleWatcher') }}" />
     <meta property="og:image" content=" {{ asset('/images/ogp.png') }}" />
     <meta name="twitter:card" content="summary_large_image">
