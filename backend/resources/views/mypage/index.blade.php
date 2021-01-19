@@ -5,9 +5,14 @@
 @endpush
 @section('content')
 <div class="container">
-    <form id="submitItemForm" onsubmit="return false">
+    <div>
+        <div>※ Amzaon商品ページのURLをそのまま入力してください。</div>
+        <div>※ Kinddle版商品のみ登録できます。</div>
+        <div>※ 登録できる上限は10件です。</div>
+    </div>
+    <form id="submitItemForm" onsubmit="return false" class="mt-3">
         <div class="form-group">
-            <label for="exampleInputPassword1">Amazon URL</label>
+            <label for="exampleInputPassword1">Amazon URLを入力</label>
             <input type="text" class="form-control" autofocus placeholder="AmazonURLを入力" id="itemForm" autocomplete="off">
         </div>
         <button type="submit" class="btn btn-primary">
