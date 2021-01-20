@@ -37,4 +37,7 @@ return [
         'client_secret' => env('TWITTER_API_SECRET'),
         'redirect'      => env('TWITTER_CALLBACKURL'),
     ],
+    'sendgrid' => [
+        'api_key' => env('SENDGRID_API_KEY'),
+    ],
 ];

@@ -124,6 +124,8 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/starkbank/ecdsa" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/sendgrid/sendgrid" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/sendgrid/php-http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/s-ichikawa/laravel-sendgrid-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/deprecation-contracts" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
