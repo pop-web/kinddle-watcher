@@ -117,7 +117,7 @@
                         </a>
                     </li> -->
                     <li class="mx-2">
-                        <a href="/contact">
+                        <a href="https://forms.gle/kJYrdgGBAqRn4hJJ9" target="_blank">
                             <small>お問い合わせ</small>
                         </a>
                     </li>
