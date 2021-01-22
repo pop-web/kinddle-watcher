@@ -19,6 +19,7 @@ class UsersTableSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
             'status' => 1,
+            'notice' => 1
         ]);
     }
 }
