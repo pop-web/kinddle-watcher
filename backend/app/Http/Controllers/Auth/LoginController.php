@@ -76,9 +76,9 @@ class LoginController extends Controller
             [
                 'email' => $user->getEmail(),
                 // Twitter認証のためメール認証statusはTRUEにしておく。
-                ['status' => 1],
+                'status' => 1,
                 // メール通知をTRUEにしておく。
-                ['notice' => 1]
+                'notice' => 1
             ]
         );
         Auth::login($myinfo);
