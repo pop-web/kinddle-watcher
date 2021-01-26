@@ -73,11 +73,13 @@ class LoginController extends Controller
 
         $myinfo = User::firstOrCreate(
             ['token' => $user->token ],
-            ['email' => $user->getEmail()],
-            // Twitter認証のためメール認証statusはTRUEにしておく。
-            ['status' => 1],
-            // メール通知をTRUEにしておく。
-            ['notice' => 1]
+            [
+                'email' => $user->getEmail(),
+                // Twitter認証のためメール認証statusはTRUEにしておく。
+                ['status' => 1],
+                // メール通知をTRUEにしておく。
+                ['notice' => 1]
+            ]
         );
         Auth::login($myinfo);
         return redirect()->to('/'); // homeへ転送
