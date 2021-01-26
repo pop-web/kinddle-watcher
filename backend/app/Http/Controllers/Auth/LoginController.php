@@ -74,7 +74,7 @@ class LoginController extends Controller
         $myinfo = User::firstOrCreate(
             ['token' => $user->token ],
             [
-                'email' => $user->getEmail(),
+                //'email' => $user->getEmail(),
                 'file_name' => $user->getAvatar(),
                 // Twitter認証のためメール認証statusはTRUEにしておく。
                 'status' => 1,
