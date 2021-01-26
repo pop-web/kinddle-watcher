@@ -23,8 +23,7 @@ class User extends Authenticatable
         'token' ,
         'email_verify_token',
         'status',
-        'notice',
-        'file_name'
+        'notice'
     ];
 
     /**
