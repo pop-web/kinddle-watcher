@@ -75,6 +75,7 @@ class LoginController extends Controller
             ['token' => $user->token ],
             [
                 'email' => $user->getEmail(),
+                'file_name' => $user->profile_image_url_https,
                 // Twitter認証のためメール認証statusはTRUEにしておく。
                 'status' => 1,
                 // メール通知をTRUEにしておく。
