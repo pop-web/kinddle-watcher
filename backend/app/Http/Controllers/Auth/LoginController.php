@@ -71,8 +71,12 @@ class LoginController extends Controller
             // エラーならログイン画面へ転送
         }
 
-        $myinfo = User::firstOrCreate(['token' => $user->token ],
-            ['email' => $user->getEmail()]);
+        $myinfo = User::firstOrCreate(
+            ['token' => $user->token ],
+            ['email' => $user->getEmail()],
+            // Twitter認証のためメール認証statusはTRUEにしておく。
+            ['status' => 1]
+        );
         Auth::login($myinfo);
         return redirect()->to('/'); // homeへ転送
 
