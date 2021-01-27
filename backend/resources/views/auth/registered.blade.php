@@ -17,6 +17,7 @@
                             そちらに記載されているURLにアクセスし、<br>
                             アカウントの本登録を完了させてください。
                         </p>
+                        <a class="btn btn-primary" href="{{ route('home') }}">トップへ</a>
                     </div>
                 </div>
             </div>
