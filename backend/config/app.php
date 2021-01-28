@@ -233,4 +233,7 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
+
+    // Googleアナリティクス
+    'ga_enable' => env('GA_ENABLE',false),
 ];
