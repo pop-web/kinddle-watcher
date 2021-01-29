@@ -6,20 +6,20 @@
         <div class="col-md-7">
             <img src="{{ asset('/images/kv.png') }}" alt="kv" class="w-100">
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 mt-3 mt-md-0">
             <h1 class="h1 font-weight-bold">
-                Kinddle本のセールを<br />監視し、通知する
+                Kinddle本のセールを<br class="d-none d-lg-block"/>監視し、通知する
             </h1>
-            <p class="h5">電子書籍Kinddleを登録しておき、<br>セール価格になったらメール通知します。</p>
-            <div class="mt-3">
+            <p class="h5 mt-3">電子書籍Kinddleを登録しておき、<br />セール価格になったらメール通知します。</p>
+            <div class="mt-3 text-center text-md-left">
                 <a class="btn btn-primary btn-lg rounded-pill" role="button" href="{{ route('register') }}">新規登録はこちら</a>
             </div>
-            <div class="mt-3">
+            <div class="mt-3 text-center text-md-left">
                 <a href="{{ route('login') }}"><u>ログインはこちら</u></a>
             </div>
         </div>
     </section>
-    <section style="margin-top: 6rem">
+    <section class="mt-5">
         <h1 class="h2 font-weight-bold text-center"><span class="line-marker">KinddleWatcherはこんな方にオススメです</span></h1>
         <div class="row mt-5">
             <div class="col-sm-4">

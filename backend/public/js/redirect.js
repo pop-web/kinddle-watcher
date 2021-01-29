@@ -96,6 +96,7 @@
 window.onload = function () {
   var count = 3;
   setInterval(function () {
+    console.log(count);
     count--;
     var id = document.querySelector('#timer').textContent = count;
 
