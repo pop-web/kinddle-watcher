@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-    <!-- Google analytics -->
     @includeWhen(config('app.ga_enable'), 'ga')
 
     <meta charset="utf-8">
