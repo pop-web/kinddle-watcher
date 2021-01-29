@@ -81,41 +81,41 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/deleteItem.js":
-/*!************************************!*\
-  !*** ./resources/js/deleteItem.js ***!
-  \************************************/
+/***/ "./resources/js/redirect.js":
+/*!**********************************!*\
+  !*** ./resources/js/redirect.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-document.addEventListener('DOMContentLoaded', function () {
-  var deleteForms = document.querySelectorAll(".delete_form");
-  deleteForms.forEach(function (deleteForm) {
-    deleteForm.addEventListener("submit", function () {
-      if (!window.confirm('マイリストから削除しますか？')) {
-        return false;
-      }
+window.onload = function () {
+  var count = 3;
+  setInterval(function () {
+    count--;
+    var id = document.querySelector('#timer').textContent = count;
 
-      deleteForm.submit();
-    });
-  });
-});
+    if (count <= 0) {
+      clearInterval(id);
+      location.href = '/';
+    }
+  }, 1000);
+};
 
 /***/ }),
 
-/***/ 3:
-/*!******************************************!*\
-  !*** multi ./resources/js/deleteItem.js ***!
-  \******************************************/
+/***/ 1:
+/*!****************************************!*\
+  !*** multi ./resources/js/redirect.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/koga/kinddle-watcher/backend/resources/js/deleteItem.js */"./resources/js/deleteItem.js");
+module.exports = __webpack_require__(/*! /Users/koga/kinddle-watcher/backend/resources/js/redirect.js */"./resources/js/redirect.js");
 
 
 /***/ })

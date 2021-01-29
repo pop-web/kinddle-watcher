@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@push('scripts')
+    <script src="{{ mix('/js/redirect.js') }}"></script>
+@endpush
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -18,6 +20,7 @@
                             アカウントの本登録を完了させてください。
                         </p>
                         <a class="btn btn-primary" href="{{ route('home') }}">トップへ</a>
+                        <p class="mt-5"><span id="timer">3</span>秒後にトップページで移動します...</p>
                     </div>
                 </div>
             </div>

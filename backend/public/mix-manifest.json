@@ -4,5 +4,6 @@
     "/js/deleteAccount.js": "/js/deleteAccount.js",
     "/js/deleteItem.js": "/js/deleteItem.js",
     "/js/imagePreview.js": "/js/imagePreview.js",
+    "/js/redirect.js": "/js/redirect.js",
     "/js/showItemModal.js": "/js/showItemModal.js"
 }
