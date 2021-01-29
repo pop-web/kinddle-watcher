@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-    @includeWhen(config('app.ga_enable'), 'gtm')
+    @includeWhen(config('app.ga_enable'), 'ga')
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,6 @@
     <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-    @includeWhen(config('app.ga_enable'), 'gtm2')
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-secondary shadow-sm">
             <div class="container">
