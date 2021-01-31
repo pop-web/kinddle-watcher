@@ -1,7 +1,6 @@
 window.onload = () => {
     let count = 3
     setInterval(() => {
-        console.log(count)
         count--;
         let id = document.querySelector('#timer').textContent=count;
         if(count <= 0) {
