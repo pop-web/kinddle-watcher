@@ -1,8 +1,8 @@
 window.onload = () => {
-    let count = 3
-    setInterval(() => {
+    let count = 10
+    let id = setInterval(() => {
         count--;
-        let id = document.querySelector('#timer').textContent=count;
+        document.querySelector('#timer').textContent=count;
         if(count <= 0) {
             clearInterval(id);
             location.href='/';

@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header text-center font-weight-bold bg-light">本会員登録完了</div>
 
-                    <div class="card-body bg-light">
+                    <div class="card-body bg-light text-center">
                         <p>本会員登録が完了しました。</p>
                         <a href="{{url('/login')}}" class="sg-btn">ログイン画面へ</a>
 

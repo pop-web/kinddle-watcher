@@ -118,6 +118,8 @@ class RegisterController extends Controller
             }
             // ユーザーステータス更新
             $user->status = config('const.USER_STATUS.REGISTER');//REGISTER=1
+            // / メール通知をTRUEにしておく。
+            $user->notice = 1;
             $user->email_verified_at = Carbon::now();
             if ($user->save()) {
                 return view('auth.main.registered');

@@ -94,11 +94,10 @@
 /***/ (function(module, exports) {
 
 window.onload = function () {
-  var count = 3;
-  setInterval(function () {
-    console.log(count);
+  var count = 10;
+  var id = setInterval(function () {
     count--;
-    var id = document.querySelector('#timer').textContent = count;
+    document.querySelector('#timer').textContent = count;
 
     if (count <= 0) {
       clearInterval(id);
