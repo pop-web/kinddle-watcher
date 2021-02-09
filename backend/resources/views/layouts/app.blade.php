@@ -119,7 +119,7 @@
                         </a>
                     </li> -->
                     <li class="mx-2">
-                        <a href="https://forms.gle/kJYrdgGBAqRn4hJJ9" target="_blank">
+                        <a href="https://forms.gle/kJYrdgGBAqRn4hJJ9" target="_blank" rel="noopener">
                             <small>お問い合わせ</small>
                         </a>
                     </li>

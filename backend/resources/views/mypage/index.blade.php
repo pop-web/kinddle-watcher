@@ -36,7 +36,7 @@
                         <i class="fas fa-times-circle fa-2x"></i>
                     </button>
                 </form>
-                <a href="{{ $item->url }}&tag=watakushiha-22" target="_blank">
+                <a href="{{ $item->url }}&tag=watakushiha-22" target="_blank" rel="noopener">
                     <img class="card-img-top shadow" src="{{ $item->img_url }}" alt="{{ $item->title }}">
                 </a>
                 <div class="card-body mt-2 p-0">
@@ -74,7 +74,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <a href="" target="_blank"><img src="" alt="" class="w-50 mx-auto d-block"></a>
+                        <a href="" target="_blank" rel="noopener"><img src="" alt="" class="w-50 mx-auto d-block"></a>
                         <h5 class="text-center mt-3"></h5>
                         <div class="d-flex justify-content-center mt-3">
                             <div class="h5 bg-secondary text-white rounded-pill py-1 px-2" id="itemPrice"></div>
