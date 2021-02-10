@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try{
             if(!itemForm.value) throw { errMsg : "Amazon URLを入力してください。" }
             const { data } = await axios.post('/scrape',{targetUrl : itemForm.value})
+            console.log(data);
             itemTitle.innerHTML = data.title
             itemUrl.setAttribute('href', data.url);
             itemImgUrl.setAttribute('src', data.img_url);
