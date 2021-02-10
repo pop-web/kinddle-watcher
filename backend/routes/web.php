@@ -16,7 +16,7 @@ if (config('app.env') === 'production' or config('app.env') === 'staging' or con
     URL::forceScheme('https');
 }
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', '@@@@@@@@@HomeController@index')->name('home');
 
 Auth::routes();
 
