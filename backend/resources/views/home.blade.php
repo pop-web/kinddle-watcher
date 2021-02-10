@@ -12,10 +12,11 @@
             </h1>
             <p class="h5 mt-3">電子書籍Kinddleを登録しておき、<br />セール価格になったらメール通知します。</p>
             <div class="mt-3 text-center text-md-left">
-                <a class="btn btn-primary btn-lg rounded-pill" role="button" href="{{ route('register') }}">新規登録はこちら</a>
+{{--                <a class="btn btn-primary btn-lg rounded-pill" role="button" href="{{ route('register') }}">新規登録はこちら</a>--}}
+                <a class="btn btn-primary btn-lg rounded-pill disabled" role="button" href="{{ route('register') }}">新規登録停止中</a>
             </div>
             <div class="mt-3 text-center text-md-left">
-                <a href="{{ route('login') }}"><u>ログインはこちら</u></a>
+{{--                <a href="{{ route('login') }}"><u>ログインはこちら</u></a>--}}
             </div>
         </div>
     </section>
