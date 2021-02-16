@@ -12,4 +12,4 @@ AmazonのKinddle書籍を登録しておき、セール価格になったら通�
  - SendGrid
 
 # URL
-[https://kinddle-watcher.herokuapp.com/](https://kinddle-watcher.herokuapp.com/)***（サービス停中）***
+[https://kinddle-watcher.herokuapp.com/](https://kinddle-watcher.herokuapp.com/)***（サービス停止中）***
